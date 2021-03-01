@@ -1,0 +1,19 @@
+{
+	"name": "laser",
+	"plugin-id": "TiledBg",
+	"sid": 283035437611250,
+	"instanceVariables": [
+		{
+			"name": "id",
+			"type": "number",
+			"desc": "",
+			"sid": 613104170931235
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"laser1",
+		"laser2"
+	]
+}

@@ -1,0 +1,734 @@
+{
+	"name": "Event sheet 1",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "ropeLength",
+			"type": "number",
+			"initialValue": "510",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 246737920656216
+		},
+		{
+			"eventType": "variable",
+			"name": "goal",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 468864588437483
+		},
+		{
+			"eventType": "variable",
+			"name": "levelNow",
+			"type": "number",
+			"initialValue": "1",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 762196281240747
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "playerControl",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 987672907242200,
+							"parameters": {
+								"key": 87
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "player1",
+							"sid": 271460657024314,
+							"behaviorType": "Platform",
+							"parameters": {
+								"control": "jump"
+							}
+						}
+					],
+					"sid": 158651907045630
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 128776238506769,
+							"parameters": {
+								"key": 65
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "player1",
+							"sid": 819122364422188,
+							"behaviorType": "Platform",
+							"parameters": {
+								"control": "left"
+							}
+						}
+					],
+					"sid": 996856127579605
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 910332291836846,
+							"parameters": {
+								"key": 68
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "player1",
+							"sid": 147082369598283,
+							"behaviorType": "Platform",
+							"parameters": {
+								"control": "right"
+							}
+						}
+					],
+					"sid": 444310809487206
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 237082304269232,
+							"parameters": {
+								"key": 38
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "player2",
+							"sid": 740299913622906,
+							"behaviorType": "Platform",
+							"parameters": {
+								"control": "jump"
+							}
+						}
+					],
+					"sid": 900495476840012
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 319907996723633,
+							"parameters": {
+								"key": 37
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "player2",
+							"sid": 444919048662341,
+							"behaviorType": "Platform",
+							"parameters": {
+								"control": "left"
+							}
+						}
+					],
+					"sid": 657255628230115
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 912206174164942,
+							"parameters": {
+								"key": 39
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "player2",
+							"sid": 907725152288162,
+							"behaviorType": "Platform",
+							"parameters": {
+								"control": "right"
+							}
+						}
+					],
+					"sid": 425563073186272
+				}
+			],
+			"sid": 915101949324491
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "game",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 545707588619205
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 862094863265284,
+							"parameters": {
+								"variable": "ropeLength",
+								"value": "player1.Width*8"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 512031871969632,
+							"parameters": {
+								"variable": "goal",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-max-speed",
+							"objectClass": "player",
+							"sid": 646436203011289,
+							"behaviorType": "Platform",
+							"parameters": {
+								"max-speed": "player.Width*5"
+							}
+						},
+						{
+							"id": "set-jump-strength",
+							"objectClass": "player",
+							"sid": 858202468903328,
+							"behaviorType": "Platform",
+							"parameters": {
+								"jump-strength": "player.Height * 6"
+							}
+						},
+						{
+							"id": "set-gravity",
+							"objectClass": "player",
+							"sid": 160167070455298,
+							"behaviorType": "Platform",
+							"parameters": {
+								"gravity": "player.Height * 11"
+							}
+						},
+						{
+							"id": "set-solid-collision-filter",
+							"objectClass": "player1",
+							"sid": 870033168520381,
+							"parameters": {
+								"mode": "inclusive",
+								"tags": "\"normal player player1\""
+							}
+						},
+						{
+							"id": "set-solid-collision-filter",
+							"objectClass": "player2",
+							"sid": 658154137261920,
+							"parameters": {
+								"mode": "inclusive",
+								"tags": "\"normal player player2\""
+							}
+						}
+					],
+					"sid": 189270404302299
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 965091738008794
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position-to-another-object",
+							"objectClass": "rope",
+							"sid": 571031617266060,
+							"parameters": {
+								"object": "player1",
+								"image-point-optional": "0"
+							}
+						},
+						{
+							"id": "set-size",
+							"objectClass": "rope",
+							"sid": 634985245663107,
+							"parameters": {
+								"width": "distance(player1.X, player1.Y, player2.X, player2.Y)",
+								"height": "16"
+							}
+						},
+						{
+							"id": "set-angle-toward-position",
+							"objectClass": "rope",
+							"sid": 854491756424382,
+							"parameters": {
+								"x": "player2.X",
+								"y": "player2.Y"
+							}
+						},
+						{
+							"id": "set-default-color",
+							"objectClass": "rope",
+							"sid": 946684420105740,
+							"parameters": {
+								"color": "rgbEx(distance(player1.X, player1.Y, player2.X, player2.Y)/ropeLength * 255, (500-distance(player1.X, player1.Y, player2.X, player2.Y))/ropeLength * 255, 0)"
+							}
+						}
+					],
+					"sid": 264419242956333
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 741470223629242,
+							"parameters": {
+								"first-value": "distance(player1.X, player1.Y, player2.X, player2.Y)",
+								"comparison": 4,
+								"second-value": "ropeLength"
+							}
+						},
+						{
+							"id": "is-on-screen",
+							"objectClass": "rope",
+							"sid": 861363546590226
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "rope",
+							"sid": 894202987467655
+						},
+						{
+							"id": "destroy",
+							"objectClass": "player1",
+							"sid": 269108347477696
+						},
+						{
+							"id": "destroy",
+							"objectClass": "player2",
+							"sid": 968938882962086
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 300528606433037,
+							"parameters": {
+								"seconds": "1"
+							}
+						},
+						{
+							"id": "restart-layout",
+							"objectClass": "System",
+							"sid": 343923783811737
+						}
+					],
+					"sid": 960055593880449
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "player1",
+							"sid": 684945106127385,
+							"parameters": {
+								"object": "goal1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "rope",
+							"sid": 777039395254124
+						},
+						{
+							"id": "destroy",
+							"objectClass": "player1",
+							"sid": 552665443285442
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 905830114598655,
+							"parameters": {
+								"variable": "goal",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 580701437125055
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "player2",
+							"sid": 931504530772501,
+							"parameters": {
+								"object": "goal2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "rope",
+							"sid": 971935582265750
+						},
+						{
+							"id": "destroy",
+							"objectClass": "player2",
+							"sid": 924040237046920
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 548075774233275,
+							"parameters": {
+								"variable": "goal",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 615327200934648
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 589002670049502,
+							"parameters": {
+								"variable": "goal",
+								"comparison": 5,
+								"value": "2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 860854412714291,
+							"parameters": {
+								"seconds": "1"
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 737856095155000,
+							"parameters": {
+								"variable": "levelNow",
+								"value": "1"
+							}
+						},
+						{
+							"id": "go-to-layout-by-name",
+							"objectClass": "System",
+							"sid": 167998201224510,
+							"parameters": {
+								"layout": "\"level\"&levelNow"
+							}
+						}
+					],
+					"sid": 663408910507840
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-at-offset",
+							"objectClass": "player2",
+							"sid": 643748853010233,
+							"parameters": {
+								"object": "laser2",
+								"offset-x": "0",
+								"offset-y": "-5"
+							}
+						},
+						{
+							"id": "is-visible",
+							"objectClass": "laser2",
+							"sid": 136328788610765
+						}
+					],
+					"actions": [
+						{
+							"id": "set-vector-y",
+							"objectClass": "player2",
+							"sid": 641801885207997,
+							"behaviorType": "Platform",
+							"parameters": {
+								"vector-y": "0"
+							}
+						}
+					],
+					"sid": 930759045259645
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-at-offset",
+							"objectClass": "player1",
+							"sid": 635416058971437,
+							"parameters": {
+								"object": "laser1",
+								"offset-x": "0",
+								"offset-y": "-5"
+							}
+						},
+						{
+							"id": "is-visible",
+							"objectClass": "laser1",
+							"sid": 816138710660800
+						}
+					],
+					"actions": [
+						{
+							"id": "set-vector-y",
+							"objectClass": "player1",
+							"sid": 660557171847151,
+							"behaviorType": "Platform",
+							"parameters": {
+								"vector-y": "0"
+							}
+						}
+					],
+					"sid": 778526328966669
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "button",
+							"sid": 612106866045432,
+							"parameters": {
+								"object": "player"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "button",
+							"sid": 210310579202214,
+							"parameters": {
+								"instance-variable": "isActive",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 630431145946150
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "button",
+							"sid": 661085003796163,
+							"parameters": {
+								"object": "player"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "button",
+							"sid": 111290433862938,
+							"parameters": {
+								"instance-variable": "isActive",
+								"value": "false"
+							}
+						}
+					],
+					"sid": 472235206850552
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "button",
+							"sid": 952497441289660,
+							"parameters": {
+								"instance-variable": "isActive"
+							}
+						},
+						{
+							"id": "for-each",
+							"objectClass": "System",
+							"sid": 864363189050576,
+							"parameters": {
+								"object": "button"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 629220142424922,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "button",
+									"sid": 338447955206038,
+									"parameters": {
+										"instance-variable": "targetType",
+										"comparison": 0,
+										"value": "1"
+									}
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "laser",
+									"sid": 697212236715163,
+									"parameters": {
+										"instance-variable": "id",
+										"comparison": 0,
+										"value": "button.targetId"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "laser",
+									"sid": 550423200838245,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								}
+							],
+							"sid": 156493904715509
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "button",
+							"sid": 765352250503404,
+							"parameters": {
+								"instance-variable": "isActive"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "for-each",
+							"objectClass": "System",
+							"sid": 214922879505231,
+							"parameters": {
+								"object": "button"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 792708714423481,
+					"disabled": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "button",
+									"sid": 616539393417585,
+									"parameters": {
+										"instance-variable": "targetType",
+										"comparison": 0,
+										"value": "1"
+									}
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "laser",
+									"sid": 169077685237722,
+									"parameters": {
+										"instance-variable": "id",
+										"comparison": 0,
+										"value": "button.targetId"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "laser",
+									"sid": 147168008385714,
+									"parameters": {
+										"visibility": "visible"
+									}
+								}
+							],
+							"sid": 610151796196813,
+							"disabled": true
+						}
+					]
+				}
+			],
+			"sid": 593979676810917
+		}
+	],
+	"sid": 479096189201659
+}
