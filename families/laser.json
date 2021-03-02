@@ -10,7 +10,13 @@
 			"sid": 485430015986979
 		}
 	],
-	"behaviorTypes": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 520725180183116
+		}
+	],
 	"effectTypes": [],
 	"members": [
 		"Laser1",

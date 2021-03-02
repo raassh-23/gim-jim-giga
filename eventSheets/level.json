@@ -73,17 +73,6 @@
 							"parameters": {
 								"key": 65
 							}
-						},
-						{
-							"id": "is-overlapping-at-offset",
-							"objectClass": "player1",
-							"sid": 260202903321969,
-							"parameters": {
-								"object": "Laser2",
-								"offset-x": "-5",
-								"offset-y": "0"
-							},
-							"isInverted": true
 						}
 					],
 					"actions": [
@@ -109,17 +98,6 @@
 							"parameters": {
 								"key": 68
 							}
-						},
-						{
-							"id": "is-overlapping-at-offset",
-							"objectClass": "player1",
-							"sid": 853493724474206,
-							"parameters": {
-								"object": "Laser2",
-								"offset-x": "5",
-								"offset-y": "0"
-							},
-							"isInverted": true
 						}
 					],
 					"actions": [
@@ -170,17 +148,6 @@
 							"parameters": {
 								"key": 37
 							}
-						},
-						{
-							"id": "is-overlapping-at-offset",
-							"objectClass": "player2",
-							"sid": 267016810502844,
-							"parameters": {
-								"object": "Laser1",
-								"offset-x": "-5",
-								"offset-y": "0"
-							},
-							"isInverted": true
 						}
 					],
 					"actions": [
@@ -206,17 +173,6 @@
 							"parameters": {
 								"key": 39
 							}
-						},
-						{
-							"id": "is-overlapping-at-offset",
-							"objectClass": "player2",
-							"sid": 440749378237253,
-							"parameters": {
-								"object": "Laser1",
-								"offset-x": "5",
-								"offset-y": "0"
-							},
-							"isInverted": true
 						}
 					],
 					"actions": [
@@ -255,10 +211,10 @@
 						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
-							"sid": 862094863265284,
+							"sid": 360364279525715,
 							"parameters": {
 								"variable": "ropeLength",
-								"value": "player1.Width*8"
+								"value": "player1.Width*7.5"
 							}
 						},
 						{
@@ -331,6 +287,41 @@
 							"parameters": {
 								"instance-variable": "initialY",
 								"value": "Self.Y"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "movingGround",
+							"sid": 774390814168105,
+							"parameters": {
+								"instance-variable": "initialX",
+								"value": "Self.X"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "movingGround",
+							"sid": 663177539005936,
+							"parameters": {
+								"instance-variable": "initialY",
+								"value": "Self.Y"
+							}
+						},
+						{
+							"id": "tween-two-properties",
+							"objectClass": "movingGround",
+							"sid": 114799380447245,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"movePingPong\"",
+								"property": "position",
+								"end-x": "Self.TargetX",
+								"end-y": "Self.TargetY",
+								"time": "Self.duration",
+								"ease": "noease",
+								"destroy-on-complete": "no",
+								"loop": "yes",
+								"ping-pong": "yes"
 							}
 						}
 					],
@@ -528,164 +519,6 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "is-visible",
-							"objectClass": "Laser1",
-							"sid": 916761504071655
-						}
-					],
-					"actions": [],
-					"sid": 996156538341216,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "is-overlapping-at-offset",
-									"objectClass": "player2",
-									"sid": 927289115777925,
-									"parameters": {
-										"object": "Laser1",
-										"offset-x": "0",
-										"offset-y": "-5"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-vector-y",
-									"objectClass": "player2",
-									"sid": 766446195993125,
-									"behaviorType": "Platform",
-									"parameters": {
-										"vector-y": "0"
-									}
-								}
-							],
-							"sid": 791262194487109
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "is-overlapping-at-offset",
-									"objectClass": "player2",
-									"sid": 667279734224342,
-									"parameters": {
-										"object": "Laser1",
-										"offset-x": "-5",
-										"offset-y": "0"
-									}
-								},
-								{
-									"id": "is-overlapping-at-offset",
-									"objectClass": "player2",
-									"sid": 449691866123824,
-									"parameters": {
-										"object": "Laser1",
-										"offset-x": "5",
-										"offset-y": "0"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-vector-x",
-									"objectClass": "player2",
-									"sid": 558433723550274,
-									"behaviorType": "Platform",
-									"parameters": {
-										"vector-x": "0"
-									}
-								}
-							],
-							"sid": 443793811425054,
-							"isOrBlock": true
-						}
-					]
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "is-visible",
-							"objectClass": "Laser2",
-							"sid": 774523221825958
-						}
-					],
-					"actions": [],
-					"sid": 778526328966669,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "is-overlapping-at-offset",
-									"objectClass": "player1",
-									"sid": 614971360292104,
-									"parameters": {
-										"object": "Laser2",
-										"offset-x": "0",
-										"offset-y": "-5"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-vector-y",
-									"objectClass": "player1",
-									"sid": 189116560943597,
-									"behaviorType": "Platform",
-									"parameters": {
-										"vector-y": "0"
-									}
-								}
-							],
-							"sid": 203124810673075
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "is-overlapping-at-offset",
-									"objectClass": "player1",
-									"sid": 922021137494825,
-									"parameters": {
-										"object": "Laser2",
-										"offset-x": "-5",
-										"offset-y": "0"
-									}
-								},
-								{
-									"id": "is-overlapping-at-offset",
-									"objectClass": "player1",
-									"sid": 579530656549871,
-									"parameters": {
-										"object": "Laser2",
-										"offset-x": "5",
-										"offset-y": "0"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-vector-x",
-									"objectClass": "player1",
-									"sid": 132256049253366,
-									"behaviorType": "Platform",
-									"parameters": {
-										"vector-x": "0"
-									}
-								}
-							],
-							"sid": 174564966723037,
-							"isOrBlock": true
-						}
-					]
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
 							"id": "is-overlapping-another-object",
 							"objectClass": "Button",
 							"sid": 446541530610434,
@@ -787,6 +620,15 @@
 									"sid": 509892232820885,
 									"parameters": {
 										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-enabled",
+									"objectClass": "Laser",
+									"sid": 938029149816173,
+									"behaviorType": "Solid",
+									"parameters": {
+										"state": "disabled"
 									}
 								}
 							],

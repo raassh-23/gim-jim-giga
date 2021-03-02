@@ -1,51 +1,51 @@
 {
-	"name": "moveablePlatform",
+	"name": "movingGround",
 	"plugin-id": "Sprite",
-	"sid": 216908135723466,
+	"sid": 743791119491590,
 	"isGlobal": false,
 	"instanceVariables": [
 		{
 			"name": "id",
 			"type": "number",
 			"desc": "",
-			"sid": 612481523101535
+			"sid": 821659037793943
 		},
 		{
-			"name": "targetX",
+			"name": "TargetX",
 			"type": "number",
 			"desc": "",
-			"sid": 982928025578622
+			"sid": 833670061682991
 		},
 		{
-			"name": "targetY",
+			"name": "TargetY",
 			"type": "number",
 			"desc": "",
-			"sid": 472413786149869
+			"sid": 724668849076584
 		},
 		{
 			"name": "initialX",
 			"type": "number",
 			"desc": "",
-			"sid": 680387354081850
+			"sid": 746971553991346
 		},
 		{
 			"name": "initialY",
 			"type": "number",
 			"desc": "",
-			"sid": 479424691469424
+			"sid": 386139160090642
 		},
 		{
 			"name": "duration",
 			"type": "number",
 			"desc": "",
-			"sid": 465590263059055
+			"sid": 364890692886762
 		}
 	],
 	"behaviorTypes": [
 		{
 			"behaviorId": "Tween",
 			"name": "Tween",
-			"sid": 837143101645393
+			"sid": 660912239790515
 		}
 	],
 	"effectTypes": [],
@@ -54,19 +54,39 @@
 			{
 				"frames": [
 					{
-						"width": 250,
-						"height": 250,
+						"width": 258,
+						"height": 98,
 						"originX": 0.5,
-						"originY": 0.5,
+						"originY": 0.41836734693877553,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 2110578,
+						"imageSpriteId": 3648016,
+						"collisionPoly": {
+							"points": [
+								0.3449612403100775,
+								0.01020408163265306,
+								0.5,
+								0.01020408163265306,
+								0.6540697674418605,
+								0.01020408163265306,
+								0.9951550387596899,
+								0.41836734693877553,
+								0.7160852713178295,
+								0.9872448979591837,
+								0.5,
+								0.9872448979591837,
+								0.28294573643410853,
+								0.9872448979591837,
+								0.003875968992248062,
+								0.41836734693877553
+							]
+						},
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 309852381887797,
+				"sid": 899517272281329,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

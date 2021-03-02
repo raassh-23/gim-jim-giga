@@ -2139,11 +2139,6 @@
 								"enabled": false,
 								"tags": "player"
 							}
-						},
-						"BoundToLayout": {
-							"properties": {
-								"bound-by": "edge"
-							}
 						}
 					},
 					"world": {
@@ -2193,11 +2188,6 @@
 							"properties": {
 								"enabled": false,
 								"tags": "player"
-							}
-						},
-						"BoundToLayout": {
-							"properties": {
-								"bound-by": "edge"
 							}
 						}
 					},

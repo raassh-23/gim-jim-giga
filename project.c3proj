@@ -40,14 +40,6 @@
 		},
 		{
 			"type": "behavior",
-			"id": "solid",
-			"name": "Solid",
-			"author": "Scirra",
-			"version": "r234.4",
-			"bundled": false
-		},
-		{
-			"type": "behavior",
 			"id": "Platform",
 			"name": "Platform",
 			"author": "Scirra",
@@ -56,8 +48,8 @@
 		},
 		{
 			"type": "behavior",
-			"id": "bound",
-			"name": "Bound to layout",
+			"id": "solid",
+			"name": "Solid",
 			"author": "Scirra",
 			"version": "r234.4",
 			"bundled": false
@@ -66,22 +58,19 @@
 	"uniqueId": "ylkhirwm57z",
 	"objectTypes": {
 		"items": [
-			"normalPlatform",
 			"player1",
 			"player2",
 			"Keyboard",
 			"rope",
 			"goal2",
 			"goal1",
-			"playerPlatform1",
-			"playerPlatform2",
 			"toggleButton",
 			"Laser1",
 			"Laser2",
 			"HoldButton",
-			"moveablePlatform",
 			"Ground",
-			"moveableGround"
+			"moveableGround",
+			"movingGround"
 		],
 		"subfolders": []
 	},
@@ -89,7 +78,6 @@
 	"containers": [],
 	"families": {
 		"items": [
-			"platformTiled",
 			"player",
 			"Laser",
 			"Button",
@@ -101,7 +89,8 @@
 		"items": [
 			"level1",
 			"level2",
-			"level3"
+			"level3",
+			"level4"
 		],
 		"subfolders": []
 	},

@@ -64,78 +64,6 @@
 					}
 				},
 				{
-					"type": "playerPlatform1",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 24,
-					"instanceVariables": {},
-					"behaviors": {
-						"Solid": {
-							"properties": {
-								"enabled": true,
-								"tags": "player1"
-							}
-						}
-					},
-					"world": {
-						"x": 1136,
-						"y": 895,
-						"width": 145,
-						"height": 39,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "playerPlatform2",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 25,
-					"instanceVariables": {},
-					"behaviors": {
-						"Solid": {
-							"properties": {
-								"enabled": true,
-								"tags": "player2"
-							}
-						}
-					},
-					"world": {
-						"x": 1235,
-						"y": 1012,
-						"width": 147,
-						"height": 35,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
 					"type": "toggleButton",
 					"properties": {
 						"initially-visible": true,
@@ -214,7 +142,14 @@
 					"instanceVariables": {
 						"id": 1
 					},
-					"behaviors": {},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": "player2"
+							}
+						}
+					},
 					"world": {
 						"x": 711.4961974383011,
 						"y": 466,
@@ -245,7 +180,14 @@
 					"instanceVariables": {
 						"id": 1
 					},
-					"behaviors": {},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": "player2"
+							}
+						}
+					},
 					"world": {
 						"x": 752.4961974383011,
 						"y": 466,
@@ -276,7 +218,14 @@
 					"instanceVariables": {
 						"id": 2
 					},
-					"behaviors": {},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": "player1"
+							}
+						}
+					},
 					"world": {
 						"x": 439.3474349262409,
 						"y": 224.12215527443735,
@@ -307,7 +256,14 @@
 					"instanceVariables": {
 						"id": 1
 					},
-					"behaviors": {},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": "player2"
+							}
+						}
+					},
 					"world": {
 						"x": 793.4961974383011,
 						"y": 466,
@@ -338,7 +294,14 @@
 					"instanceVariables": {
 						"id": 1
 					},
-					"behaviors": {},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": "player2"
+							}
+						}
+					},
 					"world": {
 						"x": 833.4961974383011,
 						"y": 466,
@@ -369,7 +332,14 @@
 					"instanceVariables": {
 						"id": 1
 					},
-					"behaviors": {},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": "player2"
+							}
+						}
+					},
 					"world": {
 						"x": 874.4972804383011,
 						"y": 466,
@@ -400,7 +370,14 @@
 					"instanceVariables": {
 						"id": 1
 					},
-					"behaviors": {},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": "player2"
+							}
+						}
+					},
 					"world": {
 						"x": 915.4972808605902,
 						"y": 466,
@@ -431,7 +408,14 @@
 					"instanceVariables": {
 						"id": 1
 					},
-					"behaviors": {},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": "player2"
+							}
+						}
+					},
 					"world": {
 						"x": 956.4972808605902,
 						"y": 466,
@@ -462,7 +446,14 @@
 					"instanceVariables": {
 						"id": 1
 					},
-					"behaviors": {},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": "player2"
+							}
+						}
+					},
 					"world": {
 						"x": 996.4972808605902,
 						"y": 466,
@@ -493,7 +484,14 @@
 					"instanceVariables": {
 						"id": 1
 					},
-					"behaviors": {},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": "player2"
+							}
+						}
+					},
 					"world": {
 						"x": 1037.4880542206195,
 						"y": 466,
@@ -524,7 +522,14 @@
 					"instanceVariables": {
 						"id": 1
 					},
-					"behaviors": {},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": "player2"
+							}
+						}
+					},
 					"world": {
 						"x": 1078.4880542206192,
 						"y": 466,
@@ -555,7 +560,14 @@
 					"instanceVariables": {
 						"id": 1
 					},
-					"behaviors": {},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": "player2"
+							}
+						}
+					},
 					"world": {
 						"x": 1119.4880542206192,
 						"y": 466,
@@ -586,7 +598,14 @@
 					"instanceVariables": {
 						"id": 1
 					},
-					"behaviors": {},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": "player2"
+							}
+						}
+					},
 					"world": {
 						"x": 1159.4880542206192,
 						"y": 466,
@@ -617,7 +636,14 @@
 					"instanceVariables": {
 						"id": 1
 					},
-					"behaviors": {},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": "player2"
+							}
+						}
+					},
 					"world": {
 						"x": 1200.4891372206193,
 						"y": 466,
@@ -648,7 +674,14 @@
 					"instanceVariables": {
 						"id": 1
 					},
-					"behaviors": {},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": "player2"
+							}
+						}
+					},
 					"world": {
 						"x": 1241.4891376429086,
 						"y": 466,
@@ -679,7 +712,14 @@
 					"instanceVariables": {
 						"id": 1
 					},
-					"behaviors": {},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": "player2"
+							}
+						}
+					},
 					"world": {
 						"x": 1282.4891376429086,
 						"y": 466,
@@ -710,7 +750,14 @@
 					"instanceVariables": {
 						"id": 1
 					},
-					"behaviors": {},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": "player2"
+							}
+						}
+					},
 					"world": {
 						"x": 1322.4891376429086,
 						"y": 466,
@@ -741,7 +788,14 @@
 					"instanceVariables": {
 						"id": 2
 					},
-					"behaviors": {},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": "player1"
+							}
+						}
+					},
 					"world": {
 						"x": 398.3810235719044,
 						"y": 224.12215527443735,
@@ -772,7 +826,14 @@
 					"instanceVariables": {
 						"id": 2
 					},
-					"behaviors": {},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": "player1"
+							}
+						}
+					},
 					"world": {
 						"x": 357.39830879304645,
 						"y": 224.12215527443735,
@@ -803,7 +864,14 @@
 					"instanceVariables": {
 						"id": 2
 					},
-					"behaviors": {},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": "player1"
+							}
+						}
+					},
 					"world": {
 						"x": 316.43189743870994,
 						"y": 224.12215527443735,
@@ -834,7 +902,14 @@
 					"instanceVariables": {
 						"id": 2
 					},
-					"behaviors": {},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": "player1"
+							}
+						}
+					},
 					"world": {
 						"x": 275.4544586064368,
 						"y": 224.12215527443735,
@@ -865,7 +940,14 @@
 					"instanceVariables": {
 						"id": 2
 					},
-					"behaviors": {},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": "player1"
+							}
+						}
+					},
 					"world": {
 						"x": 234.48804725210033,
 						"y": 224.12215527443735,
@@ -896,7 +978,14 @@
 					"instanceVariables": {
 						"id": 2
 					},
-					"behaviors": {},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": "player1"
+							}
+						}
+					},
 					"world": {
 						"x": 193.53291413986864,
 						"y": 224.12215527443738,
@@ -927,7 +1016,14 @@
 					"instanceVariables": {
 						"id": 2
 					},
-					"behaviors": {},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": "player1"
+							}
+						}
+					},
 					"world": {
 						"x": 152.56650278553212,
 						"y": 224.12215527443738,
@@ -958,7 +1054,14 @@
 					"instanceVariables": {
 						"id": 2
 					},
-					"behaviors": {},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": "player1"
+							}
+						}
+					},
 					"world": {
 						"x": 111.58378800667418,
 						"y": 224.12215527443738,
@@ -989,7 +1092,14 @@
 					"instanceVariables": {
 						"id": 2
 					},
-					"behaviors": {},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": "player1"
+							}
+						}
+					},
 					"world": {
 						"x": 70.61737665233767,
 						"y": 224.12215527443738,
@@ -1020,7 +1130,14 @@
 					"instanceVariables": {
 						"id": 2
 					},
-					"behaviors": {},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": "player1"
+							}
+						}
+					},
 					"world": {
 						"x": 29.639937820064517,
 						"y": 224.12215527443738,
@@ -1051,7 +1168,14 @@
 					"instanceVariables": {
 						"id": 2
 					},
-					"behaviors": {},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": "player1"
+							}
+						}
+					},
 					"world": {
 						"x": -11.32647353427194,
 						"y": 224.12215527443738,
@@ -3466,11 +3590,6 @@
 								"enabled": false,
 								"tags": "player"
 							}
-						},
-						"BoundToLayout": {
-							"properties": {
-								"bound-by": "edge"
-							}
 						}
 					},
 					"world": {
@@ -3520,11 +3639,6 @@
 							"properties": {
 								"enabled": false,
 								"tags": "player"
-							}
-						},
-						"BoundToLayout": {
-							"properties": {
-								"bound-by": "edge"
 							}
 						}
 					},

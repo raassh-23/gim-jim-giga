@@ -13,11 +13,6 @@
 			"behaviorId": "solid",
 			"name": "Solid",
 			"sid": 713880113627710
-		},
-		{
-			"behaviorId": "bound",
-			"name": "BoundToLayout",
-			"sid": 961167471090447
 		}
 	],
 	"effectTypes": [],
