@@ -31,6 +31,22 @@
 			"bundled": false
 		},
 		{
+			"type": "plugin",
+			"id": "Spritefont2",
+			"name": "Sprite font",
+			"author": "Scirra",
+			"version": "r234.4",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Mouse",
+			"name": "Mouse",
+			"author": "Scirra",
+			"version": "r234.4",
+			"bundled": false
+		},
+		{
 			"type": "behavior",
 			"id": "Tween",
 			"name": "Tween",
@@ -70,7 +86,14 @@
 			"HoldButton",
 			"Ground",
 			"moveableGround",
-			"movingGround"
+			"movingGround",
+			"UiButton",
+			"MenuText",
+			"Mouse",
+			"lives",
+			"LevelText",
+			"laser1Coll",
+			"laser2Coll"
 		],
 		"subfolders": []
 	},
@@ -81,7 +104,8 @@
 			"player",
 			"Laser",
 			"Button",
-			"PlatformSprite"
+			"PlatformSprite",
+			"LaserColl"
 		],
 		"subfolders": []
 	},
@@ -90,13 +114,15 @@
 			"level1",
 			"level2",
 			"level3",
-			"level4"
+			"level4",
+			"Menu"
 		],
 		"subfolders": []
 	},
 	"eventSheets": {
 		"items": [
-			"level"
+			"level",
+			"Menu"
 		],
 		"subfolders": []
 	},
@@ -245,5 +271,5 @@
 	},
 	"viewportWidth": 1280,
 	"viewportHeight": 720,
-	"firstLayout": null
+	"firstLayout": "Menu"
 }

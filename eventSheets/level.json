@@ -32,6 +32,16 @@
 			"sid": 762196281240747
 		},
 		{
+			"eventType": "variable",
+			"name": "lives",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 969407542234247
+		},
+		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "playerControl",
@@ -332,9 +342,73 @@
 							"parameters": {
 								"state": "disabled"
 							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 297394084743358,
+							"parameters": {
+								"layer": "\"GameOver\"",
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "LaserColl",
+							"sid": 234164448254888,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-ignoring-input",
+							"objectClass": "player",
+							"sid": 345085845384558,
+							"behaviorType": "Platform",
+							"parameters": {
+								"input": "stop-ignoring"
+							}
 						}
 					],
-					"sid": 189270404302299
+					"sid": 189270404302299,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "repeat",
+									"objectClass": "System",
+									"sid": 931681036145944,
+									"parameters": {
+										"count": "lives-1"
+									}
+								},
+								{
+									"id": "pick-last-created",
+									"objectClass": "System",
+									"sid": 981812825364734,
+									"parameters": {
+										"object": "lives"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 378173654049823,
+									"parameters": {
+										"object-to-create": "lives",
+										"layer": "\"UI\"",
+										"x": "lives.X + lives.Width + 10",
+										"y": "lives.Y",
+										"create-hierarchy": false
+									}
+								}
+							],
+							"sid": 461230689381638
+						}
+					]
 				},
 				{
 					"eventType": "block",
@@ -613,38 +687,74 @@
 										"comparison": 0,
 										"value": "1"
 									}
-								},
-								{
-									"id": "compare-instance-variable",
-									"objectClass": "Laser",
-									"sid": 353278036053155,
-									"parameters": {
-										"instance-variable": "id",
-										"comparison": 0,
-										"value": "toggleButton.targetId"
-									}
 								}
 							],
-							"actions": [
+							"actions": [],
+							"sid": 156493904715509,
+							"children": [
 								{
-									"id": "set-visible",
-									"objectClass": "Laser",
-									"sid": 509892232820885,
-									"parameters": {
-										"visibility": "invisible"
-									}
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Laser",
+											"sid": 220151063328054,
+											"parameters": {
+												"instance-variable": "id",
+												"comparison": 0,
+												"value": "toggleButton.targetId"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-visible",
+											"objectClass": "Laser",
+											"sid": 549661063866114,
+											"parameters": {
+												"visibility": "invisible"
+											}
+										},
+										{
+											"id": "set-enabled",
+											"objectClass": "Laser",
+											"sid": 448372373051058,
+											"behaviorType": "Solid",
+											"parameters": {
+												"state": "disabled"
+											}
+										}
+									],
+									"sid": 365093147462299
 								},
 								{
-									"id": "set-enabled",
-									"objectClass": "Laser",
-									"sid": 938029149816173,
-									"behaviorType": "Solid",
-									"parameters": {
-										"state": "disabled"
-									}
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "LaserColl",
+											"sid": 952386057152459,
+											"parameters": {
+												"instance-variable": "id",
+												"comparison": 0,
+												"value": "toggleButton.targetID"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "LaserColl",
+											"sid": 439113224849531,
+											"parameters": {
+												"instance-variable": "active",
+												"value": "false"
+											}
+										}
+									],
+									"sid": 740060518645375
 								}
-							],
-							"sid": 156493904715509
+							]
 						}
 					]
 				},
@@ -879,9 +989,54 @@
 					],
 					"eventType": "function-block",
 					"conditions": [],
-					"actions": [],
+					"actions": [
+						{
+							"id": "set-ignoring-input",
+							"objectClass": "player",
+							"sid": 620782432880278,
+							"behaviorType": "Platform",
+							"parameters": {
+								"input": "start-ignoring"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 217628579627145,
+							"parameters": {
+								"variable": "lives",
+								"value": "1"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "rope",
+							"sid": 742021657654579
+						}
+					],
 					"sid": 754819891126400,
 					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-last-created",
+									"objectClass": "System",
+									"sid": 455422356287349,
+									"parameters": {
+										"object": "lives"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "lives",
+									"sid": 748871366562096
+								}
+							],
+							"sid": 757976024835374
+						},
 						{
 							"eventType": "block",
 							"conditions": [
@@ -941,13 +1096,19 @@
 						},
 						{
 							"eventType": "block",
-							"conditions": [],
-							"actions": [
+							"conditions": [
 								{
-									"id": "destroy",
-									"objectClass": "rope",
-									"sid": 862914387385785
-								},
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 710250750394831,
+									"parameters": {
+										"variable": "lives",
+										"comparison": 4,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
 								{
 									"id": "wait",
 									"objectClass": "System",
@@ -963,6 +1124,57 @@
 								}
 							],
 							"sid": 212133687818522
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 385065161214488,
+									"parameters": {
+										"variable": "lives",
+										"comparison": 3,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 573747042807073,
+									"parameters": {
+										"seconds": "1"
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 573653623868091,
+									"parameters": {
+										"layer": "\"GameOver\"",
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 101365625114973,
+									"parameters": {
+										"seconds": "1"
+									}
+								},
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 619552032254658,
+									"parameters": {
+										"layout": "Menu"
+									}
+								}
+							],
+							"sid": 632206058990184
 						}
 					]
 				},
@@ -972,15 +1184,18 @@
 						{
 							"id": "on-collision-with-another-object",
 							"objectClass": "player1",
-							"sid": 532574552712436,
+							"sid": 569559650518143,
 							"parameters": {
-								"object": "Laser2"
+								"object": "laser2Coll"
 							}
 						},
 						{
-							"id": "is-visible",
-							"objectClass": "Laser2",
-							"sid": 607215163019871
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "laser2Coll",
+							"sid": 931025719120452,
+							"parameters": {
+								"instance-variable": "active"
+							}
 						}
 					],
 					"actions": [
@@ -1008,15 +1223,18 @@
 						{
 							"id": "on-collision-with-another-object",
 							"objectClass": "player2",
-							"sid": 884833151907694,
+							"sid": 303735659484125,
 							"parameters": {
-								"object": "Laser1"
+								"object": "laser1Coll"
 							}
 						},
 						{
-							"id": "is-visible",
-							"objectClass": "Laser1",
-							"sid": 810595850876718
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "laser1Coll",
+							"sid": 664963252939417,
+							"parameters": {
+								"instance-variable": "active"
+							}
 						}
 					],
 					"actions": [

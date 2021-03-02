@@ -1,0 +1,25 @@
+{
+	"name": "LaserColl",
+	"plugin-id": "TiledBg",
+	"sid": 937733151122221,
+	"instanceVariables": [
+		{
+			"name": "id",
+			"type": "number",
+			"desc": "",
+			"sid": 385565329264632
+		},
+		{
+			"name": "active",
+			"type": "boolean",
+			"desc": "",
+			"sid": 923455548739424
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"laser1Coll",
+		"laser2Coll"
+	]
+}

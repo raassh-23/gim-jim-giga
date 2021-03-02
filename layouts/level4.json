@@ -47,12 +47,12 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 1168.4232887097833,
+						"x": 1168,
 						"y": 641,
-						"width": 55.8276449410928,
-						"height": 55.82764494109281,
-						"originX": 0.5,
-						"originY": 0.5,
+						"width": 58.28406131850088,
+						"height": 102.05293495231764,
+						"originX": 0.6666666666666666,
+						"originY": 0.5010940919037199,
 						"color": [
 							1,
 							1,
@@ -5519,6 +5519,78 @@
 						"angle": 0,
 						"zElevation": 0
 					}
+				},
+				{
+					"type": "laser1Coll",
+					"properties": {
+						"initially-visible": true,
+						"origin": "top-left",
+						"wrap-horizontal": "repeat",
+						"wrap-vertical": "repeat",
+						"image-offset-x": 0,
+						"image-offset-y": 0,
+						"image-scale-x": 1,
+						"image-scale-y": 1,
+						"image-angle": 0
+					},
+					"uid": 269,
+					"instanceVariables": {
+						"id": 2,
+						"active": true
+					},
+					"behaviors": {},
+					"world": {
+						"x": 50.219028188560856,
+						"y": 575.3848663523992,
+						"width": 660.3723396430942,
+						"height": 5.038709296469733,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "laser2Coll",
+					"properties": {
+						"initially-visible": true,
+						"origin": "top-left",
+						"wrap-horizontal": "repeat",
+						"wrap-vertical": "repeat",
+						"image-offset-x": 0,
+						"image-offset-y": 0,
+						"image-scale-x": 1,
+						"image-scale-y": 1,
+						"image-angle": 0
+					},
+					"uid": 270,
+					"instanceVariables": {
+						"id": 1,
+						"active": true
+					},
+					"behaviors": {},
+					"world": {
+						"x": 571.1506183650143,
+						"y": 454.9373696050286,
+						"width": 660.3723396430942,
+						"height": 5.038709296469733,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
 				}
 			],
 			"sid": 479322685362043,
@@ -5686,6 +5758,62 @@
 			"sid": 465775006826684,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.3686274509803922,
+				0.3686274509803922,
+				0.3686274509803922,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"global": false
+		},
+		{
+			"name": "UI",
+			"overriden": 1,
+			"instances": [],
+			"sid": 501774692760477,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.3686274509803922,
+				0.3686274509803922,
+				0.3686274509803922,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"global": false
+		},
+		{
+			"name": "GameOver",
+			"overriden": 1,
+			"instances": [],
+			"sid": 275102874882313,
+			"effectTypes": [],
+			"isInitiallyVisible": false,
 			"color": [
 				1,
 				1,

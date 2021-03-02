@@ -1,0 +1,69 @@
+{
+	"name": "Menu",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 743048977016800,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "MenuText"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 355046898057257,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "MenuText",
+							"sid": 798041038336110,
+							"parameters": {
+								"instance-variable": "id",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 143590086293864,
+							"parameters": {
+								"layout": "level1"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 361240914298929,
+							"parameters": {
+								"variable": "lives",
+								"value": "3"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 680806189067409,
+							"parameters": {
+								"variable": "levelNow",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 869131515820183
+				}
+			]
+		}
+	],
+	"sid": 495503461791079
+}
