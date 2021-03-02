@@ -323,6 +323,15 @@
 								"loop": "yes",
 								"ping-pong": "yes"
 							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "Laser",
+							"sid": 252533474358877,
+							"behaviorType": "Solid",
+							"parameters": {
+								"state": "disabled"
+							}
 						}
 					],
 					"sid": 189270404302299
@@ -367,9 +376,9 @@
 						{
 							"id": "set-default-color",
 							"objectClass": "rope",
-							"sid": 946684420105740,
+							"sid": 459588413902908,
 							"parameters": {
-								"color": "rgbEx(distance(player1.X, player1.Y, player2.X, player2.Y)/ropeLength * 255, (500-distance(player1.X, player1.Y, player2.X, player2.Y))/ropeLength * 255, 0)"
+								"color": "rgbEx(distance(player1.X, player1.Y, player2.X, player2.Y)/ropeLength * 255, (ropeLength -distance(player1.X, player1.Y, player2.X, player2.Y))/ropeLength * 255, 0)"
 							}
 						}
 					],
@@ -397,7 +406,10 @@
 					"actions": [
 						{
 							"callFunction": "gameOver",
-							"sid": 744509372679565
+							"sid": 744509372679565,
+							"parameters": [
+								"0"
+							]
 						}
 					],
 					"sid": 960055593880449
@@ -856,40 +868,175 @@
 					"functionCategory": "",
 					"functionReturnType": "none",
 					"functionIsAsync": false,
-					"functionParameters": [],
+					"functionParameters": [
+						{
+							"name": "destroyPlayer",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "1 blue, 2 red, 0 all",
+							"sid": 542255862611538
+						}
+					],
 					"eventType": "function-block",
 					"conditions": [],
-					"actions": [
+					"actions": [],
+					"sid": 754819891126400,
+					"children": [
 						{
-							"id": "destroy",
-							"objectClass": "rope",
-							"sid": 894202987467655
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 625563768077569,
+									"parameters": {
+										"variable": "destroyPlayer",
+										"comparison": 3,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "player1",
+									"sid": 818794336388301
+								}
+							],
+							"sid": 955273754994254
 						},
 						{
-							"id": "destroy",
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 933211668348409,
+									"parameters": {
+										"variable": "destroyPlayer",
+										"comparison": 0,
+										"value": "2"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 494816534289714,
+									"parameters": {
+										"variable": "destroyPlayer",
+										"comparison": 0,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "player2",
+									"sid": 200193745899178
+								}
+							],
+							"sid": 126240856998297,
+							"isOrBlock": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "rope",
+									"sid": 862914387385785
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 159342136011346,
+									"parameters": {
+										"seconds": "1"
+									}
+								},
+								{
+									"id": "restart-layout",
+									"objectClass": "System",
+									"sid": 859609315007163
+								}
+							],
+							"sid": 212133687818522
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
 							"objectClass": "player1",
-							"sid": 269108347477696
-						},
-						{
-							"id": "destroy",
-							"objectClass": "player2",
-							"sid": 968938882962086
-						},
-						{
-							"id": "wait",
-							"objectClass": "System",
-							"sid": 300528606433037,
+							"sid": 532574552712436,
 							"parameters": {
-								"seconds": "1"
+								"object": "Laser2"
 							}
 						},
 						{
-							"id": "restart-layout",
-							"objectClass": "System",
-							"sid": 343923783811737
+							"id": "is-visible",
+							"objectClass": "Laser2",
+							"sid": 607215163019871
 						}
 					],
-					"sid": 754819891126400
+					"actions": [
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 400507058015653,
+							"parameters": {
+								"seconds": "0.1"
+							}
+						},
+						{
+							"callFunction": "gameOver",
+							"sid": 764480511168947,
+							"parameters": [
+								"1"
+							]
+						}
+					],
+					"sid": 375003504939008
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "player2",
+							"sid": 884833151907694,
+							"parameters": {
+								"object": "Laser1"
+							}
+						},
+						{
+							"id": "is-visible",
+							"objectClass": "Laser1",
+							"sid": 810595850876718
+						}
+					],
+					"actions": [
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 355067316839095,
+							"parameters": {
+								"seconds": "0.1"
+							}
+						},
+						{
+							"callFunction": "gameOver",
+							"sid": 118549289409971,
+							"parameters": [
+								"2"
+							]
+						}
+					],
+					"sid": 646497905960250
 				}
 			],
 			"sid": 593979676810917
