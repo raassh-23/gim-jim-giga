@@ -1,19 +1,19 @@
 {
-	"name": "laser",
-	"plugin-id": "TiledBg",
-	"sid": 283035437611250,
+	"name": "Laser",
+	"plugin-id": "Sprite",
+	"sid": 179493198344643,
 	"instanceVariables": [
 		{
 			"name": "id",
 			"type": "number",
 			"desc": "",
-			"sid": 613104170931235
+			"sid": 485430015986979
 		}
 	],
 	"behaviorTypes": [],
 	"effectTypes": [],
 	"members": [
-		"laser1",
-		"laser2"
+		"Laser1",
+		"Laser2"
 	]
 }

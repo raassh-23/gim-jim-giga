@@ -492,17 +492,17 @@
 						{
 							"id": "is-overlapping-at-offset",
 							"objectClass": "player2",
-							"sid": 643748853010233,
+							"sid": 326215038793151,
 							"parameters": {
-								"object": "laser2",
+								"object": "Laser1",
 								"offset-x": "0",
 								"offset-y": "-5"
 							}
 						},
 						{
 							"id": "is-visible",
-							"objectClass": "laser2",
-							"sid": 136328788610765
+							"objectClass": "Laser1",
+							"sid": 953912266992750
 						}
 					],
 					"actions": [
@@ -524,17 +524,17 @@
 						{
 							"id": "is-overlapping-at-offset",
 							"objectClass": "player1",
-							"sid": 635416058971437,
+							"sid": 489247575561525,
 							"parameters": {
-								"object": "laser1",
+								"object": "Laser2",
 								"offset-x": "0",
 								"offset-y": "-5"
 							}
 						},
 						{
 							"id": "is-visible",
-							"objectClass": "laser1",
-							"sid": 816138710660800
+							"objectClass": "Laser2",
+							"sid": 774523221825958
 						}
 					],
 					"actions": [
@@ -639,8 +639,8 @@
 								},
 								{
 									"id": "compare-instance-variable",
-									"objectClass": "laser",
-									"sid": 697212236715163,
+									"objectClass": "Laser",
+									"sid": 321776727199225,
 									"parameters": {
 										"instance-variable": "id",
 										"comparison": 0,
@@ -651,8 +651,8 @@
 							"actions": [
 								{
 									"id": "set-visible",
-									"objectClass": "laser",
-									"sid": 550423200838245,
+									"objectClass": "Laser",
+									"sid": 509892232820885,
 									"parameters": {
 										"visibility": "invisible"
 									}
@@ -702,8 +702,8 @@
 								},
 								{
 									"id": "compare-instance-variable",
-									"objectClass": "laser",
-									"sid": 169077685237722,
+									"objectClass": "Laser",
+									"sid": 354745021210483,
 									"parameters": {
 										"instance-variable": "id",
 										"comparison": 0,
@@ -714,10 +714,10 @@
 							"actions": [
 								{
 									"id": "set-visible",
-									"objectClass": "laser",
-									"sid": 147168008385714,
+									"objectClass": "Laser",
+									"sid": 682565526689663,
 									"parameters": {
-										"visibility": "visible"
+										"visibility": "invisible"
 									}
 								}
 							],

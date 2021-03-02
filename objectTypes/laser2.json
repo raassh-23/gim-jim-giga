@@ -1,20 +1,109 @@
 {
-	"name": "laser2",
-	"plugin-id": "TiledBg",
-	"sid": 731146925835358,
+	"name": "Laser2",
+	"plugin-id": "Sprite",
+	"sid": 841734651185534,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
 	"effectTypes": [],
-	"image": {
-		"width": 250,
-		"height": 250,
-		"originX": 0.5,
-		"originY": 0.5,
-		"originalSource": "",
-		"exportFormat": "png",
-		"exportQuality": 0.8,
-		"imageSpriteId": 9735788,
-		"useCollisionPoly": true
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 82,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 9643534,
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 82,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 9266314,
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 82,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 9860321,
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 82,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7409777,
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 82,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7220860,
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 82,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8220976,
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 82,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7542342,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 534936924619979,
+				"name": "Default",
+				"isLooping": true,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 14
+			}
+		],
+		"subfolders": []
 	}
 }
