@@ -1,28 +1,9 @@
 {
-	"name": "button",
+	"name": "HoldButton",
 	"plugin-id": "Sprite",
-	"sid": 797963502439413,
+	"sid": 696178152331311,
 	"isGlobal": false,
-	"instanceVariables": [
-		{
-			"name": "targetType",
-			"type": "number",
-			"desc": "",
-			"sid": 385694849846855
-		},
-		{
-			"name": "targetId",
-			"type": "number",
-			"desc": "",
-			"sid": 826403656605676
-		},
-		{
-			"name": "isActive",
-			"type": "boolean",
-			"desc": "",
-			"sid": 640979697080178
-		}
-	],
+	"instanceVariables": [],
 	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
@@ -37,12 +18,12 @@
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 280766,
+						"imageSpriteId": 1947584,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 258693829204365,
+				"sid": 867543246142985,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

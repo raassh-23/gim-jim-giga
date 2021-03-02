@@ -32,6 +32,14 @@
 		},
 		{
 			"type": "behavior",
+			"id": "Tween",
+			"name": "Tween",
+			"author": "Scirra",
+			"version": "r234.4",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
 			"id": "solid",
 			"name": "Solid",
 			"author": "Scirra",
@@ -59,9 +67,11 @@
 			"goal1",
 			"playerPlatform1",
 			"playerPlatform2",
-			"button",
+			"toggleButton",
 			"Laser1",
-			"Laser2"
+			"Laser2",
+			"HoldButton",
+			"moveablePlatform"
 		],
 		"subfolders": []
 	},
@@ -71,14 +81,16 @@
 		"items": [
 			"platform",
 			"player",
-			"Laser"
+			"Laser",
+			"Button"
 		],
 		"subfolders": []
 	},
 	"layouts": {
 		"items": [
 			"level1",
-			"level2"
+			"level2",
+			"level3"
 		],
 		"subfolders": []
 	},

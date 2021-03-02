@@ -73,6 +73,17 @@
 							"parameters": {
 								"key": 65
 							}
+						},
+						{
+							"id": "is-overlapping-at-offset",
+							"objectClass": "player1",
+							"sid": 260202903321969,
+							"parameters": {
+								"object": "Laser2",
+								"offset-x": "-5",
+								"offset-y": "0"
+							},
+							"isInverted": true
 						}
 					],
 					"actions": [
@@ -98,6 +109,17 @@
 							"parameters": {
 								"key": 68
 							}
+						},
+						{
+							"id": "is-overlapping-at-offset",
+							"objectClass": "player1",
+							"sid": 853493724474206,
+							"parameters": {
+								"object": "Laser2",
+								"offset-x": "5",
+								"offset-y": "0"
+							},
+							"isInverted": true
 						}
 					],
 					"actions": [
@@ -148,6 +170,17 @@
 							"parameters": {
 								"key": 37
 							}
+						},
+						{
+							"id": "is-overlapping-at-offset",
+							"objectClass": "player2",
+							"sid": 267016810502844,
+							"parameters": {
+								"object": "Laser1",
+								"offset-x": "-5",
+								"offset-y": "0"
+							},
+							"isInverted": true
 						}
 					],
 					"actions": [
@@ -173,6 +206,17 @@
 							"parameters": {
 								"key": 39
 							}
+						},
+						{
+							"id": "is-overlapping-at-offset",
+							"objectClass": "player2",
+							"sid": 440749378237253,
+							"parameters": {
+								"object": "Laser1",
+								"offset-x": "5",
+								"offset-y": "0"
+							},
+							"isInverted": true
 						}
 					],
 					"actions": [
@@ -270,6 +314,24 @@
 								"mode": "inclusive",
 								"tags": "\"normal player player2\""
 							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "moveablePlatform",
+							"sid": 619191977437257,
+							"parameters": {
+								"instance-variable": "initialX",
+								"value": "Self.X"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "moveablePlatform",
+							"sid": 206307414629820,
+							"parameters": {
+								"instance-variable": "initialY",
+								"value": "Self.Y"
+							}
 						}
 					],
 					"sid": 189270404302299
@@ -296,10 +358,10 @@
 						{
 							"id": "set-size",
 							"objectClass": "rope",
-							"sid": 634985245663107,
+							"sid": 541841174251624,
 							"parameters": {
 								"width": "distance(player1.X, player1.Y, player2.X, player2.Y)",
-								"height": "16"
+								"height": "player.Width/4"
 							}
 						},
 						{
@@ -490,73 +552,167 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "is-overlapping-at-offset",
-							"objectClass": "player2",
-							"sid": 326215038793151,
-							"parameters": {
-								"object": "Laser1",
-								"offset-x": "0",
-								"offset-y": "-5"
-							}
-						},
-						{
 							"id": "is-visible",
 							"objectClass": "Laser1",
-							"sid": 953912266992750
+							"sid": 916761504071655
 						}
 					],
-					"actions": [
+					"actions": [],
+					"sid": 996156538341216,
+					"children": [
 						{
-							"id": "set-vector-y",
-							"objectClass": "player2",
-							"sid": 641801885207997,
-							"behaviorType": "Platform",
-							"parameters": {
-								"vector-y": "0"
-							}
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-overlapping-at-offset",
+									"objectClass": "player2",
+									"sid": 927289115777925,
+									"parameters": {
+										"object": "Laser1",
+										"offset-x": "0",
+										"offset-y": "-5"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-vector-y",
+									"objectClass": "player2",
+									"sid": 766446195993125,
+									"behaviorType": "Platform",
+									"parameters": {
+										"vector-y": "0"
+									}
+								}
+							],
+							"sid": 791262194487109
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-overlapping-at-offset",
+									"objectClass": "player2",
+									"sid": 667279734224342,
+									"parameters": {
+										"object": "Laser1",
+										"offset-x": "-5",
+										"offset-y": "0"
+									}
+								},
+								{
+									"id": "is-overlapping-at-offset",
+									"objectClass": "player2",
+									"sid": 449691866123824,
+									"parameters": {
+										"object": "Laser1",
+										"offset-x": "5",
+										"offset-y": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-vector-x",
+									"objectClass": "player2",
+									"sid": 558433723550274,
+									"behaviorType": "Platform",
+									"parameters": {
+										"vector-x": "0"
+									}
+								}
+							],
+							"sid": 443793811425054,
+							"isOrBlock": true
 						}
-					],
-					"sid": 930759045259645
+					]
 				},
 				{
 					"eventType": "block",
 					"conditions": [
-						{
-							"id": "is-overlapping-at-offset",
-							"objectClass": "player1",
-							"sid": 489247575561525,
-							"parameters": {
-								"object": "Laser2",
-								"offset-x": "0",
-								"offset-y": "-5"
-							}
-						},
 						{
 							"id": "is-visible",
 							"objectClass": "Laser2",
 							"sid": 774523221825958
 						}
 					],
-					"actions": [
+					"actions": [],
+					"sid": 778526328966669,
+					"children": [
 						{
-							"id": "set-vector-y",
-							"objectClass": "player1",
-							"sid": 660557171847151,
-							"behaviorType": "Platform",
-							"parameters": {
-								"vector-y": "0"
-							}
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-overlapping-at-offset",
+									"objectClass": "player1",
+									"sid": 614971360292104,
+									"parameters": {
+										"object": "Laser2",
+										"offset-x": "0",
+										"offset-y": "-5"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-vector-y",
+									"objectClass": "player1",
+									"sid": 189116560943597,
+									"behaviorType": "Platform",
+									"parameters": {
+										"vector-y": "0"
+									}
+								}
+							],
+							"sid": 203124810673075
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-overlapping-at-offset",
+									"objectClass": "player1",
+									"sid": 922021137494825,
+									"parameters": {
+										"object": "Laser2",
+										"offset-x": "-5",
+										"offset-y": "0"
+									}
+								},
+								{
+									"id": "is-overlapping-at-offset",
+									"objectClass": "player1",
+									"sid": 579530656549871,
+									"parameters": {
+										"object": "Laser2",
+										"offset-x": "5",
+										"offset-y": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-vector-x",
+									"objectClass": "player1",
+									"sid": 132256049253366,
+									"behaviorType": "Platform",
+									"parameters": {
+										"vector-x": "0"
+									}
+								}
+							],
+							"sid": 174564966723037,
+							"isOrBlock": true
 						}
-					],
-					"sid": 778526328966669
+					]
 				},
 				{
 					"eventType": "block",
 					"conditions": [
 						{
 							"id": "is-overlapping-another-object",
-							"objectClass": "button",
-							"sid": 612106866045432,
+							"objectClass": "Button",
+							"sid": 446541530610434,
 							"parameters": {
 								"object": "player"
 							}
@@ -565,10 +721,10 @@
 					"actions": [
 						{
 							"id": "set-boolean-instvar",
-							"objectClass": "button",
-							"sid": 210310579202214,
+							"objectClass": "Button",
+							"sid": 101501428027806,
 							"parameters": {
-								"instance-variable": "isActive",
+								"instance-variable": "active",
 								"value": "true"
 							}
 						}
@@ -580,8 +736,8 @@
 					"conditions": [
 						{
 							"id": "is-overlapping-another-object",
-							"objectClass": "button",
-							"sid": 661085003796163,
+							"objectClass": "Button",
+							"sid": 141755827699395,
 							"parameters": {
 								"object": "player"
 							},
@@ -591,25 +747,25 @@
 					"actions": [
 						{
 							"id": "set-boolean-instvar",
-							"objectClass": "button",
-							"sid": 111290433862938,
+							"objectClass": "Button",
+							"sid": 222078371072877,
 							"parameters": {
-								"instance-variable": "isActive",
+								"instance-variable": "active",
 								"value": "false"
 							}
 						}
 					],
-					"sid": 472235206850552
+					"sid": 527477215624569
 				},
 				{
 					"eventType": "block",
 					"conditions": [
 						{
 							"id": "is-boolean-instance-variable-set",
-							"objectClass": "button",
-							"sid": 952497441289660,
+							"objectClass": "toggleButton",
+							"sid": 652125045916129,
 							"parameters": {
-								"instance-variable": "isActive"
+								"instance-variable": "active"
 							}
 						},
 						{
@@ -617,7 +773,7 @@
 							"objectClass": "System",
 							"sid": 864363189050576,
 							"parameters": {
-								"object": "button"
+								"object": "toggleButton"
 							}
 						}
 					],
@@ -629,8 +785,8 @@
 							"conditions": [
 								{
 									"id": "compare-instance-variable",
-									"objectClass": "button",
-									"sid": 338447955206038,
+									"objectClass": "toggleButton",
+									"sid": 794303639496476,
 									"parameters": {
 										"instance-variable": "targetType",
 										"comparison": 0,
@@ -640,11 +796,11 @@
 								{
 									"id": "compare-instance-variable",
 									"objectClass": "Laser",
-									"sid": 321776727199225,
+									"sid": 353278036053155,
 									"parameters": {
 										"instance-variable": "id",
 										"comparison": 0,
-										"value": "button.targetId"
+										"value": "toggleButton.targetId"
 									}
 								}
 							],
@@ -667,19 +823,18 @@
 					"conditions": [
 						{
 							"id": "is-boolean-instance-variable-set",
-							"objectClass": "button",
-							"sid": 765352250503404,
+							"objectClass": "toggleButton",
+							"sid": 577664779607655,
 							"parameters": {
-								"instance-variable": "isActive"
-							},
-							"isInverted": true
+								"instance-variable": "active"
+							}
 						},
 						{
 							"id": "for-each",
 							"objectClass": "System",
 							"sid": 214922879505231,
 							"parameters": {
-								"object": "button"
+								"object": "toggleButton"
 							}
 						}
 					],
@@ -692,8 +847,8 @@
 							"conditions": [
 								{
 									"id": "compare-instance-variable",
-									"objectClass": "button",
-									"sid": 616539393417585,
+									"objectClass": "toggleButton",
+									"sid": 444057498243135,
 									"parameters": {
 										"instance-variable": "targetType",
 										"comparison": 0,
@@ -703,11 +858,11 @@
 								{
 									"id": "compare-instance-variable",
 									"objectClass": "Laser",
-									"sid": 354745021210483,
+									"sid": 438964014572297,
 									"parameters": {
 										"instance-variable": "id",
 										"comparison": 0,
-										"value": "button.targetId"
+										"value": "toggleButton.targetId"
 									}
 								}
 							],
@@ -723,6 +878,157 @@
 							],
 							"sid": 610151796196813,
 							"disabled": true
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "HoldButton",
+							"sid": 801110617846460,
+							"parameters": {
+								"instance-variable": "active"
+							}
+						},
+						{
+							"id": "for-each",
+							"objectClass": "System",
+							"sid": 233371204657937,
+							"parameters": {
+								"object": "HoldButton"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 958336767890242,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "HoldButton",
+									"sid": 807492942491090,
+									"parameters": {
+										"instance-variable": "targetType",
+										"comparison": 0,
+										"value": "2"
+									}
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "moveablePlatform",
+									"sid": 130035743162865,
+									"parameters": {
+										"instance-variable": "id",
+										"comparison": 0,
+										"value": "HoldButton.targetId"
+									}
+								},
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 896671915634164
+								}
+							],
+							"actions": [
+								{
+									"id": "tween-two-properties",
+									"objectClass": "moveablePlatform",
+									"sid": 470705158452878,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"moveToTarget\"",
+										"property": "position",
+										"end-x": "Self.targetX",
+										"end-y": "Self.targetY",
+										"time": "distance(Self.X, Self.Y, Self.targetX, Self.targetY) / distance(Self.initialX, Self.initialY, Self.targetX, Self.targetY)*Self.duration",
+										"ease": "noease",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no"
+									}
+								}
+							],
+							"sid": 540013725813687
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "HoldButton",
+							"sid": 648941281111328,
+							"parameters": {
+								"instance-variable": "active"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "for-each",
+							"objectClass": "System",
+							"sid": 359777529896499,
+							"parameters": {
+								"object": "HoldButton"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 536050108185694,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "HoldButton",
+									"sid": 512978543899063,
+									"parameters": {
+										"instance-variable": "targetType",
+										"comparison": 0,
+										"value": "2"
+									}
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "moveablePlatform",
+									"sid": 522315998398631,
+									"parameters": {
+										"instance-variable": "id",
+										"comparison": 0,
+										"value": "HoldButton.targetId"
+									}
+								},
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 962987678806968
+								}
+							],
+							"actions": [
+								{
+									"id": "tween-two-properties",
+									"objectClass": "moveablePlatform",
+									"sid": 704250087843200,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"moveToInitial\"",
+										"property": "position",
+										"end-x": "Self.initialX",
+										"end-y": "Self.initialY",
+										"time": "distance(Self.X, Self.Y, Self.initialX, Self.initialY) / distance(Self.targetX, Self.targetY, Self.initialX, Self.initialY)*Self.duration",
+										"ease": "noease",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no"
+									}
+								}
+							],
+							"sid": 183033814555596
 						}
 					]
 				}

@@ -1,0 +1,80 @@
+{
+	"name": "moveablePlatform",
+	"plugin-id": "Sprite",
+	"sid": 216908135723466,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "id",
+			"type": "number",
+			"desc": "",
+			"sid": 612481523101535
+		},
+		{
+			"name": "targetX",
+			"type": "number",
+			"desc": "",
+			"sid": 982928025578622
+		},
+		{
+			"name": "targetY",
+			"type": "number",
+			"desc": "",
+			"sid": 472413786149869
+		},
+		{
+			"name": "initialX",
+			"type": "number",
+			"desc": "",
+			"sid": 680387354081850
+		},
+		{
+			"name": "initialY",
+			"type": "number",
+			"desc": "",
+			"sid": 479424691469424
+		},
+		{
+			"name": "duration",
+			"type": "number",
+			"desc": "",
+			"sid": 465590263059055
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 837143101645393
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 2110578,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 309852381887797,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

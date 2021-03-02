@@ -14,6 +14,7 @@
 	"members": [
 		"normalPlatform",
 		"playerPlatform1",
-		"playerPlatform2"
+		"playerPlatform2",
+		"moveablePlatform"
 	]
 }

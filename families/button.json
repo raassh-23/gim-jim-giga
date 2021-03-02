@@ -1,0 +1,31 @@
+{
+	"name": "Button",
+	"plugin-id": "Sprite",
+	"sid": 482432454719110,
+	"instanceVariables": [
+		{
+			"name": "targetType",
+			"type": "number",
+			"desc": "",
+			"sid": 920669759364358
+		},
+		{
+			"name": "targetID",
+			"type": "number",
+			"desc": "",
+			"sid": 791766485633884
+		},
+		{
+			"name": "active",
+			"type": "boolean",
+			"desc": "",
+			"sid": 137099399047221
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"HoldButton",
+		"toggleButton"
+	]
+}
