@@ -1,0 +1,100 @@
+{
+	"name": "moveableGround",
+	"plugin-id": "Sprite",
+	"sid": 488795756097000,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "id",
+			"type": "number",
+			"desc": "",
+			"sid": 478536144565813
+		},
+		{
+			"name": "TargetX",
+			"type": "number",
+			"desc": "",
+			"sid": 535091815447016
+		},
+		{
+			"name": "TargetY",
+			"type": "number",
+			"desc": "",
+			"sid": 191623216928508
+		},
+		{
+			"name": "initialX",
+			"type": "number",
+			"desc": "",
+			"sid": 634697516390106
+		},
+		{
+			"name": "initialY",
+			"type": "number",
+			"desc": "",
+			"sid": 809126146186401
+		},
+		{
+			"name": "duration",
+			"type": "number",
+			"desc": "",
+			"sid": 363493482009414
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 313742749535784
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 258,
+						"height": 98,
+						"originX": 0.5,
+						"originY": 0.41836734693877553,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 5796917,
+						"collisionPoly": {
+							"points": [
+								0.3449612403100775,
+								0.01020408163265306,
+								0.5,
+								0.01020408163265306,
+								0.6540697674418605,
+								0.01020408163265306,
+								0.9951550387596899,
+								0.41836734693877553,
+								0.7160852713178295,
+								0.9872448979591837,
+								0.5,
+								0.9872448979591837,
+								0.28294573643410853,
+								0.9872448979591837,
+								0.003875968992248062,
+								0.41836734693877553
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 833422724344927,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

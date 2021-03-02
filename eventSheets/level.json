@@ -1,5 +1,5 @@
 {
-	"name": "Event sheet 1",
+	"name": "level",
 	"events": [
 		{
 			"eventType": "variable",
@@ -317,8 +317,8 @@
 						},
 						{
 							"id": "set-instvar-value",
-							"objectClass": "moveablePlatform",
-							"sid": 619191977437257,
+							"objectClass": "moveableGround",
+							"sid": 312803464947959,
 							"parameters": {
 								"instance-variable": "initialX",
 								"value": "Self.X"
@@ -326,8 +326,8 @@
 						},
 						{
 							"id": "set-instvar-value",
-							"objectClass": "moveablePlatform",
-							"sid": 206307414629820,
+							"objectClass": "moveableGround",
+							"sid": 117186610077617,
 							"parameters": {
 								"instance-variable": "initialY",
 								"value": "Self.Y"
@@ -405,32 +405,8 @@
 					],
 					"actions": [
 						{
-							"id": "destroy",
-							"objectClass": "rope",
-							"sid": 894202987467655
-						},
-						{
-							"id": "destroy",
-							"objectClass": "player1",
-							"sid": 269108347477696
-						},
-						{
-							"id": "destroy",
-							"objectClass": "player2",
-							"sid": 968938882962086
-						},
-						{
-							"id": "wait",
-							"objectClass": "System",
-							"sid": 300528606433037,
-							"parameters": {
-								"seconds": "1"
-							}
-						},
-						{
-							"id": "restart-layout",
-							"objectClass": "System",
-							"sid": 343923783811737
+							"callFunction": "gameOver",
+							"sid": 744509372679565
 						}
 					],
 					"sid": 960055593880449
@@ -919,7 +895,7 @@
 								},
 								{
 									"id": "compare-instance-variable",
-									"objectClass": "moveablePlatform",
+									"objectClass": "moveableGround",
 									"sid": 130035743162865,
 									"parameters": {
 										"instance-variable": "id",
@@ -936,7 +912,7 @@
 							"actions": [
 								{
 									"id": "tween-two-properties",
-									"objectClass": "moveablePlatform",
+									"objectClass": "moveableGround",
 									"sid": 470705158452878,
 									"behaviorType": "Tween",
 									"parameters": {
@@ -995,7 +971,7 @@
 								},
 								{
 									"id": "compare-instance-variable",
-									"objectClass": "moveablePlatform",
+									"objectClass": "moveableGround",
 									"sid": 522315998398631,
 									"parameters": {
 										"instance-variable": "id",
@@ -1012,7 +988,7 @@
 							"actions": [
 								{
 									"id": "tween-two-properties",
-									"objectClass": "moveablePlatform",
+									"objectClass": "moveableGround",
 									"sid": 704250087843200,
 									"behaviorType": "Tween",
 									"parameters": {
@@ -1031,6 +1007,47 @@
 							"sid": 183033814555596
 						}
 					]
+				},
+				{
+					"functionName": "gameOver",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "rope",
+							"sid": 894202987467655
+						},
+						{
+							"id": "destroy",
+							"objectClass": "player1",
+							"sid": 269108347477696
+						},
+						{
+							"id": "destroy",
+							"objectClass": "player2",
+							"sid": 968938882962086
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 300528606433037,
+							"parameters": {
+								"seconds": "1"
+							}
+						},
+						{
+							"id": "restart-layout",
+							"objectClass": "System",
+							"sid": 343923783811737
+						}
+					],
+					"sid": 754819891126400
 				}
 			],
 			"sid": 593979676810917

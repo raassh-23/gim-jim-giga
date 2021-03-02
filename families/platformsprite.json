@@ -1,20 +1,18 @@
 {
-	"name": "platform",
+	"name": "PlatformSprite",
 	"plugin-id": "Sprite",
-	"sid": 902744267983612,
+	"sid": 364543820381683,
 	"instanceVariables": [],
 	"behaviorTypes": [
 		{
 			"behaviorId": "solid",
 			"name": "Solid",
-			"sid": 302917315984693
+			"sid": 987917984630198
 		}
 	],
 	"effectTypes": [],
 	"members": [
-		"normalPlatform",
-		"playerPlatform1",
-		"playerPlatform2",
-		"moveablePlatform"
+		"Ground",
+		"moveableGround"
 	]
 }
