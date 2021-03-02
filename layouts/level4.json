@@ -2,7 +2,35 @@
 	"name": "level4",
 	"layers": [
 		{
-			"name": "Layer 0",
+			"name": "borders",
+			"overriden": 1,
+			"instances": [],
+			"sid": 773227369054761,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.3686274509803922,
+				0.3686274509803922,
+				0.3686274509803922,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"global": false
+		},
+		{
+			"name": "object",
 			"overriden": 0,
 			"instances": [
 				{

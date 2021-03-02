@@ -266,19 +266,19 @@
 						{
 							"id": "set-solid-collision-filter",
 							"objectClass": "player1",
-							"sid": 870033168520381,
+							"sid": 980991676080779,
 							"parameters": {
 								"mode": "inclusive",
-								"tags": "\"normal player player1\""
+								"tags": "\"normal player player1 border\""
 							}
 						},
 						{
 							"id": "set-solid-collision-filter",
 							"objectClass": "player2",
-							"sid": 658154137261920,
+							"sid": 928063650319846,
 							"parameters": {
 								"mode": "inclusive",
-								"tags": "\"normal player player2\""
+								"tags": "\"normal player player2 border\""
 							}
 						},
 						{

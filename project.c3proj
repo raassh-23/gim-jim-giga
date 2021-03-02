@@ -56,16 +56,16 @@
 		},
 		{
 			"type": "behavior",
-			"id": "Platform",
-			"name": "Platform",
+			"id": "solid",
+			"name": "Solid",
 			"author": "Scirra",
 			"version": "r234.4",
 			"bundled": false
 		},
 		{
 			"type": "behavior",
-			"id": "solid",
-			"name": "Solid",
+			"id": "Platform",
+			"name": "Platform",
 			"author": "Scirra",
 			"version": "r234.4",
 			"bundled": false
@@ -93,7 +93,8 @@
 			"lives",
 			"LevelText",
 			"laser1Coll",
-			"laser2Coll"
+			"laser2Coll",
+			"border"
 		],
 		"subfolders": []
 	},
