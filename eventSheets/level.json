@@ -79,10 +79,6 @@
 							"parameters": {
 								"control": "jump"
 							}
-						},
-						{
-							"callFunction": "playJump",
-							"sid": 372024007991417
 						}
 					],
 					"sid": 158651907045630
@@ -158,10 +154,6 @@
 							"parameters": {
 								"control": "jump"
 							}
-						},
-						{
-							"callFunction": "playJump",
-							"sid": 804311247331642
 						}
 					],
 					"sid": 900495476840012
@@ -227,6 +219,10 @@
 						}
 					],
 					"actions": [
+						{
+							"callFunction": "playJump",
+							"sid": 372024007991417
+						},
 						{
 							"id": "set-animation",
 							"objectClass": "Player1",
@@ -364,6 +360,10 @@
 						}
 					],
 					"actions": [
+						{
+							"callFunction": "playJump",
+							"sid": 372024007991417
+						},
 						{
 							"id": "set-animation",
 							"objectClass": "Player2",
@@ -1829,12 +1829,14 @@
 					"conditions": [],
 					"actions": [
 						{
-							"id": "log",
-							"objectClass": "Browser",
-							"sid": 764207151335328,
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 239003511191458,
 							"parameters": {
-								"type": "log",
-								"message": "\"putus\""
+								"audio-file": "161650__cosmicembers__snapping-chain",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"sfx\""
 							}
 						}
 					],
@@ -1851,12 +1853,14 @@
 					"conditions": [],
 					"actions": [
 						{
-							"id": "log",
-							"objectClass": "Browser",
-							"sid": 795225565670626,
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 343618842875845,
 							"parameters": {
-								"type": "log",
-								"message": "\"loncat\""
+								"audio-file": "Jump5",
+								"loop": "not-looping",
+								"volume": "-10",
+								"tag-optional": "\"sfx\""
 							}
 						}
 					],
