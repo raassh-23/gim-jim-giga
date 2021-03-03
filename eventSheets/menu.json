@@ -235,6 +235,34 @@
 				}
 			],
 			"sid": 684074471923580
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-tag-playing",
+					"objectClass": "Audio",
+					"sid": 790044363636927,
+					"parameters": {
+						"tag": "\"bgm\""
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 615592034279184,
+					"parameters": {
+						"audio-file": "hmmm",
+						"loop": "looping",
+						"volume": "0",
+						"tag-optional": "\"bgm\""
+					}
+				}
+			],
+			"sid": 675550462707123
 		}
 	],
 	"sid": 495503461791079

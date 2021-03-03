@@ -25,7 +25,7 @@
 			"eventType": "variable",
 			"name": "levelNow",
 			"type": "number",
-			"initialValue": "5",
+			"initialValue": "1",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
@@ -79,6 +79,10 @@
 							"parameters": {
 								"control": "jump"
 							}
+						},
+						{
+							"callFunction": "playJump",
+							"sid": 372024007991417
 						}
 					],
 					"sid": 158651907045630
@@ -154,6 +158,10 @@
 							"parameters": {
 								"control": "jump"
 							}
+						},
+						{
+							"callFunction": "playJump",
+							"sid": 804311247331642
 						}
 					],
 					"sid": 900495476840012
@@ -668,6 +676,14 @@
 							"parameters": {
 								"visibility": "invisible"
 							}
+						},
+						{
+							"id": "set-image-scale-y",
+							"objectClass": "rope",
+							"sid": 783244232789889,
+							"parameters": {
+								"scale-y": "(playerColl.Width)/80 *100"
+							}
 						}
 					],
 					"sid": 189270404302299,
@@ -802,6 +818,10 @@
 							"parameters": [
 								"0"
 							]
+						},
+						{
+							"callFunction": "playRopeBreak",
+							"sid": 913916109947245
 						}
 					],
 					"sid": 960055593880449
@@ -842,6 +862,10 @@
 								"variable": "goal",
 								"value": "1"
 							}
+						},
+						{
+							"callFunction": "playPortal",
+							"sid": 369980067966823
 						}
 					],
 					"sid": 580701437125055
@@ -882,6 +906,10 @@
 								"variable": "goal",
 								"value": "1"
 							}
+						},
+						{
+							"callFunction": "playPortal",
+							"sid": 845367278642455
 						}
 					],
 					"sid": 615327200934648
@@ -939,6 +967,15 @@
 							"parameters": {
 								"object": "playerColl"
 							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Button",
+							"sid": 246609590135012,
+							"parameters": {
+								"instance-variable": "active"
+							},
+							"isInverted": true
 						}
 					],
 					"actions": [
@@ -952,7 +989,39 @@
 							}
 						}
 					],
-					"sid": 630431145946150
+					"sid": 630431145946150,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "ButtonAnim",
+									"sid": 468262801773610,
+									"parameters": {
+										"instance-variable": "id",
+										"comparison": 0,
+										"value": "Button.AnimId"
+									}
+								},
+								{
+									"id": "is-animation-playing",
+									"objectClass": "ButtonAnim",
+									"sid": 346713941627686,
+									"parameters": {
+										"animation": "\"inactive\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "playActivateButton",
+									"sid": 352794914788234
+								}
+							],
+							"sid": 537412069488186
+						}
+					]
 				},
 				{
 					"eventType": "block",
@@ -965,6 +1034,14 @@
 								"object": "playerColl"
 							},
 							"isInverted": true
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Button",
+							"sid": 647068685696798,
+							"parameters": {
+								"instance-variable": "active"
+							}
 						}
 					],
 					"actions": [
@@ -1627,6 +1704,10 @@
 							}
 						},
 						{
+							"callFunction": "playDeath",
+							"sid": 273078858464795
+						},
+						{
 							"callFunction": "gameOver",
 							"sid": 764480511168947,
 							"parameters": [
@@ -1666,6 +1747,10 @@
 							}
 						},
 						{
+							"callFunction": "playDeath",
+							"sid": 340623288408548
+						},
+						{
 							"callFunction": "gameOver",
 							"sid": 118549289409971,
 							"parameters": [
@@ -1677,6 +1762,132 @@
 				}
 			],
 			"sid": 593979676810917
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "audio",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"functionName": "playPortal",
+					"functionDescription": "",
+					"functionCategory": "audio",
+					"functionReturnType": "none",
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 604038639686476,
+							"parameters": {
+								"audio-file": "wiu",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"sfx\""
+							}
+						}
+					],
+					"sid": 904427930986438
+				},
+				{
+					"functionName": "playDeath",
+					"functionDescription": "",
+					"functionCategory": "audio",
+					"functionReturnType": "none",
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 689695806759198,
+							"parameters": {
+								"audio-file": "Grunting-sound",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"sfx\""
+							}
+						}
+					],
+					"sid": 955182254326481
+				},
+				{
+					"functionName": "playRopeBreak",
+					"functionDescription": "",
+					"functionCategory": "audio",
+					"functionReturnType": "none",
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "log",
+							"objectClass": "Browser",
+							"sid": 764207151335328,
+							"parameters": {
+								"type": "log",
+								"message": "\"putus\""
+							}
+						}
+					],
+					"sid": 318683789448916
+				},
+				{
+					"functionName": "playJump",
+					"functionDescription": "",
+					"functionCategory": "audio",
+					"functionReturnType": "none",
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "log",
+							"objectClass": "Browser",
+							"sid": 795225565670626,
+							"parameters": {
+								"type": "log",
+								"message": "\"loncat\""
+							}
+						}
+					],
+					"sid": 561883423935770
+				},
+				{
+					"functionName": "playActivateButton",
+					"functionDescription": "",
+					"functionCategory": "audio",
+					"functionReturnType": "none",
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 434632053423866,
+							"parameters": {
+								"audio-file": "Button-sound",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"sfx\""
+							}
+						}
+					],
+					"sid": 273222266299655
+				}
+			],
+			"sid": 102600115750685
 		}
 	],
 	"sid": 479096189201659

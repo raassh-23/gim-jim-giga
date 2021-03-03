@@ -155,9 +155,9 @@
 			"level2",
 			"level3",
 			"level4",
+			"level5",
 			"Menu",
 			"Credit",
-			"level5",
 			"EndScreen"
 		],
 		"subfolders": []
@@ -176,11 +176,33 @@
 			"subfolders": []
 		},
 		"sound": {
-			"items": [],
+			"items": [
+				{
+					"name": "Button-sound.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 111144126927212
+				},
+				{
+					"name": "Grunting-sound.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 862014009904336
+				},
+				{
+					"name": "wiu.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 181283871387585
+				}
+			],
 			"subfolders": []
 		},
 		"music": {
-			"items": [],
+			"items": [
+				{
+					"name": "hmmm.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 159321171585920
+				}
+			],
 			"subfolders": []
 		},
 		"video": {

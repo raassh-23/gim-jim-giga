@@ -133,7 +133,7 @@
 						"targetType": 1,
 						"targetID": 1,
 						"active": false,
-						"AnimId": 0
+						"AnimId": 1
 					},
 					"behaviors": {},
 					"world": {
@@ -167,7 +167,7 @@
 						"targetType": 1,
 						"targetID": 2,
 						"active": false,
-						"AnimId": 0
+						"AnimId": 1
 					},
 					"behaviors": {},
 					"world": {
