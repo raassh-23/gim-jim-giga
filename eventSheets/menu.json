@@ -19,6 +19,14 @@
 				{
 					"callFunction": "playClick",
 					"sid": 396561740297992
+				},
+				{
+					"id": "set-cursor-style",
+					"objectClass": "Mouse",
+					"sid": 276064139848709,
+					"parameters": {
+						"cursor-style": "normal"
+					}
 				}
 			],
 			"sid": 355046898057257,

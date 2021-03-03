@@ -97,7 +97,7 @@
 				{
 					"type": "MenuText",
 					"properties": {
-						"text": "INI JUDUL",
+						"text": "CHAINED",
 						"enable-bbcode": true,
 						"character-width": 51,
 						"character-height": 58,
