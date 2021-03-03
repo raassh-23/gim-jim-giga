@@ -15,7 +15,12 @@
 					}
 				}
 			],
-			"actions": [],
+			"actions": [
+				{
+					"callFunction": "playClick",
+					"sid": 396561740297992
+				}
+			],
 			"sid": 355046898057257,
 			"children": [
 				{

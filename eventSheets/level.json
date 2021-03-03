@@ -1885,6 +1885,30 @@
 						}
 					],
 					"sid": 273222266299655
+				},
+				{
+					"functionName": "playClick",
+					"functionDescription": "",
+					"functionCategory": "audio",
+					"functionReturnType": "none",
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 938579135178393,
+							"parameters": {
+								"audio-file": "tap",
+								"loop": "not-looping",
+								"volume": "-10",
+								"tag-optional": "\"sfx\""
+							}
+						}
+					],
+					"sid": 815971635935946
 				}
 			],
 			"sid": 102600115750685

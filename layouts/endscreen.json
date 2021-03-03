@@ -2,7 +2,7 @@
 	"name": "EndScreen",
 	"layers": [
 		{
-			"name": "bg",
+			"name": "bgMenu",
 			"overriden": 1,
 			"instances": [],
 			"sid": 613466948506989,
@@ -64,9 +64,9 @@
 						"originX": 0,
 						"originY": 0,
 						"color": [
-							0,
-							0,
-							0,
+							1,
+							1,
+							1,
 							1
 						],
 						"angle": 0,
@@ -104,9 +104,9 @@
 						"originX": 0,
 						"originY": 0,
 						"color": [
-							0,
-							0,
-							0,
+							1,
+							1,
+							1,
 							1
 						],
 						"angle": 0,
@@ -144,9 +144,9 @@
 						"originX": 0,
 						"originY": 0,
 						"color": [
-							0,
-							0,
-							0,
+							1,
+							1,
+							1,
 							1
 						],
 						"angle": 0,

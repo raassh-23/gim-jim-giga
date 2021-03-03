@@ -2,9 +2,39 @@
 	"name": "Menu",
 	"layers": [
 		{
-			"name": "bg",
-			"overriden": 1,
-			"instances": [],
+			"name": "bgMenu",
+			"overriden": 0,
+			"instances": [
+				{
+					"type": "background",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 1,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 691,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 640,
+						"y": 360,
+						"width": 1280,
+						"height": 720,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				}
+			],
 			"sid": 806302248540452,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
@@ -27,7 +57,7 @@
 			"forceOwnTexture": false,
 			"useRenderCells": false,
 			"blendMode": "normal",
-			"global": false
+			"global": true
 		},
 		{
 			"name": "ui",
@@ -95,9 +125,9 @@
 						"originX": 0,
 						"originY": 0,
 						"color": [
-							0,
-							0,
-							0,
+							1,
+							1,
+							1,
 							1
 						],
 						"angle": 0,
