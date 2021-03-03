@@ -1,7 +1,7 @@
 {
-	"name": "toggleButton",
+	"name": "playerColl2",
 	"plugin-id": "Sprite",
-	"sid": 797963502439413,
+	"sid": 549572960841729,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
@@ -11,19 +11,26 @@
 			{
 				"frames": [
 					{
-						"width": 250,
-						"height": 250,
+						"width": 64,
+						"height": 128,
 						"originX": 0.5,
-						"originY": 0.5,
+						"originY": 0.75,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 125035,
+						"imageSpriteId": 6020185,
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Image Point 1",
+								"x": 0.5,
+								"y": 1
+							}
+						],
 						"duration": 1
 					}
 				],
-				"sid": 258693829204365,
+				"sid": 462983041860326,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

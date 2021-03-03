@@ -1,7 +1,7 @@
 {
-	"name": "player1",
+	"name": "Player1",
 	"plugin-id": "Sprite",
-	"sid": 799215745038927,
+	"sid": 894766250342730,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
@@ -11,20 +11,102 @@
 			{
 				"frames": [
 					{
-						"width": 64,
-						"height": 128,
+						"width": 116,
+						"height": 162,
 						"originX": 0.5,
-						"originY": 0.5,
+						"originY": 1,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 4425476,
+						"imageSpriteId": 2367117,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 264397145259876,
-				"name": "Animation 1",
+				"sid": 681868675219358,
+				"name": "idle",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 116,
+						"height": 162,
+						"originX": 0.5,
+						"originY": 1,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 3249804,
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 116,
+						"height": 153,
+						"originX": 0.5,
+						"originY": 1,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 5403963,
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 116,
+						"height": 162,
+						"originX": 0.5,
+						"originY": 1,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 3333360,
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 116,
+						"height": 153,
+						"originX": 0.5,
+						"originY": 1,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 472952,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 479340812474960,
+				"name": "walk",
+				"isLooping": true,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 8
+			},
+			{
+				"frames": [
+					{
+						"width": 116,
+						"height": 153,
+						"originX": 0.5,
+						"originY": 1,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 1081487,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 875374754514098,
+				"name": "jump",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,

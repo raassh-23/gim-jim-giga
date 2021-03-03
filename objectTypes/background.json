@@ -1,7 +1,7 @@
 {
-	"name": "toggleButton",
+	"name": "background",
 	"plugin-id": "Sprite",
-	"sid": 797963502439413,
+	"sid": 903377550867528,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
@@ -11,19 +11,39 @@
 			{
 				"frames": [
 					{
-						"width": 250,
-						"height": 250,
+						"width": 1280,
+						"height": 720,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 125035,
+						"imageSpriteId": 7935944,
+						"collisionPoly": {
+							"points": [
+								0,
+								0,
+								0.5,
+								0,
+								0.9994791666666667,
+								0,
+								0.9994791666666667,
+								0.5,
+								0.9994791666666667,
+								0.9990740740740741,
+								0.5,
+								0.9990740740740741,
+								0,
+								0.9990740740740741,
+								0,
+								0.5
+							]
+						},
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 258693829204365,
+				"sid": 851876882324380,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

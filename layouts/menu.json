@@ -2,7 +2,35 @@
 	"name": "Menu",
 	"layers": [
 		{
-			"name": "Layer 0",
+			"name": "bg",
+			"overriden": 1,
+			"instances": [],
+			"sid": 806302248540452,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.3686274509803922,
+				0.3686274509803922,
+				0.3686274509803922,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"global": false
+		},
+		{
+			"name": "ui",
 			"overriden": 0,
 			"instances": [
 				{
@@ -167,7 +195,7 @@
 					},
 					"uid": 278,
 					"instanceVariables": {
-						"id": 3
+						"id": 2
 					},
 					"behaviors": {},
 					"world": {
@@ -238,12 +266,12 @@
 					},
 					"uid": 282,
 					"instanceVariables": {
-						"id": 2
+						"id": 3
 					},
 					"behaviors": {},
 					"world": {
-						"x": 851.5846380036,
-						"y": 519.5186711955828,
+						"x": 850.8411813356929,
+						"y": 518.7001303939123,
 						"width": 298.96477369079855,
 						"height": 79.80736311083842,
 						"originX": 0,

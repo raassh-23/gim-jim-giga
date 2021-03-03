@@ -20,6 +20,12 @@
 			"type": "boolean",
 			"desc": "",
 			"sid": 137099399047221
+		},
+		{
+			"name": "AnimId",
+			"type": "number",
+			"desc": "",
+			"sid": 487017608383292
 		}
 	],
 	"behaviorTypes": [],

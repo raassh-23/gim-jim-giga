@@ -90,8 +90,8 @@
 	"uniqueId": "ylkhirwm57z",
 	"objectTypes": {
 		"items": [
-			"player1",
-			"player2",
+			"playerColl1",
+			"playerColl2",
 			"rope",
 			"goal2",
 			"goal1",
@@ -107,7 +107,12 @@
 			"laser1Coll",
 			"laser2Coll",
 			"border",
-			"blackBG"
+			"blackBG",
+			"Player1",
+			"Player2",
+			"ToggleButtonAnim",
+			"HoldButtonAnim",
+			"background"
 		],
 		"subfolders": [
 			{
@@ -135,11 +140,12 @@
 	"containers": [],
 	"families": {
 		"items": [
-			"player",
+			"playerColl",
 			"Laser",
 			"Button",
 			"PlatformSprite",
-			"LaserColl"
+			"LaserColl",
+			"ButtonAnim"
 		],
 		"subfolders": []
 	},

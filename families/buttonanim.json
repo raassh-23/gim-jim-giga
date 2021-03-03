@@ -1,0 +1,25 @@
+{
+	"name": "ButtonAnim",
+	"plugin-id": "Sprite",
+	"sid": 111204521382650,
+	"instanceVariables": [
+		{
+			"name": "id",
+			"type": "number",
+			"desc": "",
+			"sid": 282140345761670
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 957239795655400
+		}
+	],
+	"effectTypes": [],
+	"members": [
+		"ToggleButtonAnim",
+		"HoldButtonAnim"
+	]
+}

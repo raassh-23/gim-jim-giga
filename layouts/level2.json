@@ -2,6 +2,34 @@
 	"name": "level2",
 	"layers": [
 		{
+			"name": "bg",
+			"overriden": 1,
+			"instances": [],
+			"sid": 712523862984975,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.3686274509803922,
+				0.3686274509803922,
+				0.3686274509803922,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"global": false
+		},
+		{
 			"name": "borders",
 			"overriden": 1,
 			"instances": [],
@@ -104,7 +132,8 @@
 					"instanceVariables": {
 						"targetType": 1,
 						"targetID": 1,
-						"active": false
+						"active": false,
+						"AnimId": 0
 					},
 					"behaviors": {},
 					"world": {
@@ -137,7 +166,8 @@
 					"instanceVariables": {
 						"targetType": 1,
 						"targetID": 2,
-						"active": false
+						"active": false,
+						"AnimId": 0
 					},
 					"behaviors": {},
 					"world": {
@@ -3596,6 +3626,82 @@
 						"angle": 0,
 						"zElevation": 0
 					}
+				},
+				{
+					"type": "ToggleButtonAnim",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "inactive",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 347,
+					"instanceVariables": {
+						"id": 1
+					},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": ""
+							}
+						}
+					},
+					"world": {
+						"x": 75.93608784114858,
+						"y": 434.5625902360851,
+						"width": 43.107235554320276,
+						"height": 12.716634488524484,
+						"originX": 0.5492957746478874,
+						"originY": 0.4021164021164021,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "ToggleButtonAnim",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "inactive",
+						"initial-frame": 1,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 348,
+					"instanceVariables": {
+						"id": 2
+					},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": ""
+							}
+						}
+					},
+					"world": {
+						"x": 871.9653971854874,
+						"y": 190.57078101893464,
+						"width": 43.107235554320276,
+						"height": 12.716634488524484,
+						"originX": 0.5492957746478874,
+						"originY": 0.4021164021164021,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
 				}
 			],
 			"sid": 130271821739359,
@@ -3613,7 +3719,7 @@
 				0.35294117647058826,
 				1
 			],
-			"isTransparent": false,
+			"isTransparent": true,
 			"parallaxX": 1,
 			"parallaxY": 1,
 			"scaleRate": 1,
@@ -3660,7 +3766,7 @@
 					}
 				},
 				{
-					"type": "player1",
+					"type": "playerColl1",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -3694,11 +3800,11 @@
 					},
 					"world": {
 						"x": 213,
-						"y": 593,
+						"y": 629,
 						"width": 80,
 						"height": 160,
 						"originX": 0.5,
-						"originY": 0.5,
+						"originY": 0.75,
 						"color": [
 							1,
 							1,
@@ -3710,7 +3816,7 @@
 					}
 				},
 				{
-					"type": "player2",
+					"type": "playerColl2",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -3744,11 +3850,69 @@
 					},
 					"world": {
 						"x": 107,
-						"y": 595,
+						"y": 631,
 						"width": 80,
 						"height": 160,
 						"originX": 0.5,
-						"originY": 0.5,
+						"originY": 0.75,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Player1",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "idle",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 319,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 217.9646146540619,
+						"y": 668.4066500410653,
+						"width": 114.5732,
+						"height": 160,
+						"originX": 0.5,
+						"originY": 1,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Player2",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "idle",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 342,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 107.55843180104193,
+						"y": 671.0753363841268,
+						"width": 114.5732,
+						"height": 160,
+						"originX": 0.5,
+						"originY": 1,
 						"color": [
 							1,
 							1,

@@ -110,6 +110,32 @@
 						}
 					],
 					"sid": 537394121385582
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "UiText",
+							"sid": 337780797171832,
+							"parameters": {
+								"instance-variable": "id",
+								"comparison": 0,
+								"value": "4"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 451614131567638,
+							"parameters": {
+								"layout": "Menu"
+							}
+						}
+					],
+					"sid": 723095901410277
 				}
 			]
 		},

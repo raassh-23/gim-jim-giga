@@ -44,7 +44,7 @@
 		{
 			"eventType": "group",
 			"disabled": false,
-			"title": "playerControl",
+			"title": "player",
 			"description": "",
 			"isActiveOnStart": true,
 			"children": [
@@ -63,7 +63,7 @@
 					"actions": [
 						{
 							"id": "simulate-control",
-							"objectClass": "player1",
+							"objectClass": "playerColl1",
 							"sid": 271460657024314,
 							"behaviorType": "Platform",
 							"parameters": {
@@ -88,7 +88,7 @@
 					"actions": [
 						{
 							"id": "simulate-control",
-							"objectClass": "player1",
+							"objectClass": "playerColl1",
 							"sid": 819122364422188,
 							"behaviorType": "Platform",
 							"parameters": {
@@ -113,7 +113,7 @@
 					"actions": [
 						{
 							"id": "simulate-control",
-							"objectClass": "player1",
+							"objectClass": "playerColl1",
 							"sid": 147082369598283,
 							"behaviorType": "Platform",
 							"parameters": {
@@ -138,7 +138,7 @@
 					"actions": [
 						{
 							"id": "simulate-control",
-							"objectClass": "player2",
+							"objectClass": "playerColl2",
 							"sid": 740299913622906,
 							"behaviorType": "Platform",
 							"parameters": {
@@ -163,7 +163,7 @@
 					"actions": [
 						{
 							"id": "simulate-control",
-							"objectClass": "player2",
+							"objectClass": "playerColl2",
 							"sid": 444919048662341,
 							"behaviorType": "Platform",
 							"parameters": {
@@ -188,7 +188,7 @@
 					"actions": [
 						{
 							"id": "simulate-control",
-							"objectClass": "player2",
+							"objectClass": "playerColl2",
 							"sid": 907725152288162,
 							"behaviorType": "Platform",
 							"parameters": {
@@ -197,6 +197,280 @@
 						}
 					],
 					"sid": 425563073186272
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-jump",
+							"objectClass": "playerColl1",
+							"sid": 537745131318465,
+							"behaviorType": "Platform"
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Player1",
+							"sid": 686648373874049,
+							"parameters": {
+								"animation": "\"jump\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 608073623388831
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-on-floor",
+							"objectClass": "playerColl1",
+							"sid": 558580838107945,
+							"behaviorType": "Platform"
+						}
+					],
+					"actions": [],
+					"sid": 972343026546567,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-moving",
+									"objectClass": "playerColl1",
+									"sid": 603793444018827,
+									"behaviorType": "Platform"
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Player1",
+									"sid": 218987252090140,
+									"parameters": {
+										"animation": "\"walk\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 197161044337565
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-moving",
+									"objectClass": "playerColl1",
+									"sid": 548046887959463,
+									"behaviorType": "Platform",
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Player1",
+									"sid": 592645074510067,
+									"parameters": {
+										"animation": "\"idle\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 178981155586598
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 485271023381629,
+							"parameters": {
+								"first-value": "playerColl1.Platform.VectorX",
+								"comparison": 4,
+								"second-value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-mirrored",
+							"objectClass": "Player1",
+							"sid": 377934781770944,
+							"parameters": {
+								"state": "not-mirrored"
+							}
+						}
+					],
+					"sid": 841063558703528
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 687513326462841,
+							"parameters": {
+								"first-value": "playerColl1.Platform.VectorX",
+								"comparison": 2,
+								"second-value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-mirrored",
+							"objectClass": "Player1",
+							"sid": 397052158584848,
+							"parameters": {
+								"state": "mirrored"
+							}
+						}
+					],
+					"sid": 774420753849387
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-jump",
+							"objectClass": "playerColl2",
+							"sid": 609625329190694,
+							"behaviorType": "Platform"
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Player2",
+							"sid": 343134772219560,
+							"parameters": {
+								"animation": "\"jump\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 864092978497480
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-on-floor",
+							"objectClass": "playerColl2",
+							"sid": 340400799457233,
+							"behaviorType": "Platform"
+						}
+					],
+					"actions": [],
+					"sid": 610025274495632,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-moving",
+									"objectClass": "playerColl2",
+									"sid": 642690020107924,
+									"behaviorType": "Platform"
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Player2",
+									"sid": 732550458664956,
+									"parameters": {
+										"animation": "\"walk\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 847803907773182
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-moving",
+									"objectClass": "playerColl2",
+									"sid": 439109827944320,
+									"behaviorType": "Platform",
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Player2",
+									"sid": 619907584238843,
+									"parameters": {
+										"animation": "\"idle\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 428347725802900
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 246935395565757,
+							"parameters": {
+								"first-value": "playerColl2.Platform.VectorX",
+								"comparison": 4,
+								"second-value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-mirrored",
+							"objectClass": "Player2",
+							"sid": 981225596464248,
+							"parameters": {
+								"state": "not-mirrored"
+							}
+						}
+					],
+					"sid": 942124824694107
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 592069464318494,
+							"parameters": {
+								"first-value": "playerColl2.Platform.VectorX",
+								"comparison": 2,
+								"second-value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-mirrored",
+							"objectClass": "Player2",
+							"sid": 399603125173801,
+							"parameters": {
+								"state": "mirrored"
+							}
+						}
+					],
+					"sid": 539300861133470
 				}
 			],
 			"sid": 915101949324491
@@ -224,7 +498,7 @@
 							"sid": 360364279525715,
 							"parameters": {
 								"variable": "ropeLength",
-								"value": "player1.Width*7.5"
+								"value": "playerColl1.Width*7.5"
 							}
 						},
 						{
@@ -238,34 +512,34 @@
 						},
 						{
 							"id": "set-max-speed",
-							"objectClass": "player",
+							"objectClass": "playerColl",
 							"sid": 646436203011289,
 							"behaviorType": "Platform",
 							"parameters": {
-								"max-speed": "player.Width*5"
+								"max-speed": "playerColl.Width*5"
 							}
 						},
 						{
 							"id": "set-jump-strength",
-							"objectClass": "player",
+							"objectClass": "playerColl",
 							"sid": 858202468903328,
 							"behaviorType": "Platform",
 							"parameters": {
-								"jump-strength": "player.Height * 6"
+								"jump-strength": "playerColl.Height * 6"
 							}
 						},
 						{
 							"id": "set-gravity",
-							"objectClass": "player",
+							"objectClass": "playerColl",
 							"sid": 160167070455298,
 							"behaviorType": "Platform",
 							"parameters": {
-								"gravity": "player.Height * 11"
+								"gravity": "playerColl.Height * 11"
 							}
 						},
 						{
 							"id": "set-solid-collision-filter",
-							"objectClass": "player1",
+							"objectClass": "playerColl1",
 							"sid": 980991676080779,
 							"parameters": {
 								"mode": "inclusive",
@@ -274,7 +548,7 @@
 						},
 						{
 							"id": "set-solid-collision-filter",
-							"objectClass": "player2",
+							"objectClass": "playerColl2",
 							"sid": 928063650319846,
 							"parameters": {
 								"mode": "inclusive",
@@ -362,11 +636,27 @@
 						},
 						{
 							"id": "set-ignoring-input",
-							"objectClass": "player",
+							"objectClass": "playerColl",
 							"sid": 345085845384558,
 							"behaviorType": "Platform",
 							"parameters": {
 								"input": "stop-ignoring"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "playerColl",
+							"sid": 613179829712656,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Button",
+							"sid": 224475418664068,
+							"parameters": {
+								"visibility": "invisible"
 							}
 						}
 					],
@@ -396,11 +686,11 @@
 								{
 									"id": "create-object",
 									"objectClass": "System",
-									"sid": 378173654049823,
+									"sid": 398753412872448,
 									"parameters": {
 										"object-to-create": "lives",
 										"layer": "\"UI\"",
-										"x": "lives.X + lives.Width + 10",
+										"x": "lives.X + lives.Width + 20",
 										"y": "lives.Y",
 										"create-hierarchy": false
 									}
@@ -425,7 +715,7 @@
 							"objectClass": "rope",
 							"sid": 571031617266060,
 							"parameters": {
-								"object": "player1",
+								"object": "playerColl1",
 								"image-point-optional": "0"
 							}
 						},
@@ -434,8 +724,8 @@
 							"objectClass": "rope",
 							"sid": 541841174251624,
 							"parameters": {
-								"width": "distance(player1.X, player1.Y, player2.X, player2.Y)",
-								"height": "player.Width/4"
+								"width": "distance(playerColl1.X, playerColl1.Y, playerCOll2.X, playerCOll2.Y)",
+								"height": "playerColl.Width/4"
 							}
 						},
 						{
@@ -443,8 +733,8 @@
 							"objectClass": "rope",
 							"sid": 854491756424382,
 							"parameters": {
-								"x": "player2.X",
-								"y": "player2.Y"
+								"x": "playerCOll2.X",
+								"y": "playerCOll2.Y"
 							}
 						},
 						{
@@ -452,7 +742,25 @@
 							"objectClass": "rope",
 							"sid": 459588413902908,
 							"parameters": {
-								"color": "rgbEx(distance(player1.X, player1.Y, player2.X, player2.Y)/ropeLength * 255, (ropeLength -distance(player1.X, player1.Y, player2.X, player2.Y))/ropeLength * 255, 0)"
+								"color": "rgbEx(distance(playerColl1.X, playerColl1.Y, playerCOll2.X, playerCOll2.Y)/ropeLength * 255, (ropeLength -distance(playerColl1.X, playerColl1.Y, playerCOll2.X, playerCOll2.Y))/ropeLength * 255, 0)"
+							}
+						},
+						{
+							"id": "set-position-to-another-object",
+							"objectClass": "Player1",
+							"sid": 312376634034123,
+							"parameters": {
+								"object": "playerColl1",
+								"image-point-optional": "1"
+							}
+						},
+						{
+							"id": "set-position-to-another-object",
+							"objectClass": "Player2",
+							"sid": 313545279038816,
+							"parameters": {
+								"object": "playerColl2",
+								"image-point-optional": "1"
 							}
 						}
 					],
@@ -466,7 +774,7 @@
 							"objectClass": "System",
 							"sid": 741470223629242,
 							"parameters": {
-								"first-value": "distance(player1.X, player1.Y, player2.X, player2.Y)",
+								"first-value": "distance(playerColl1.X, playerColl1.Y, playerCOll2.X, playerCOll2.Y)",
 								"comparison": 4,
 								"second-value": "ropeLength"
 							}
@@ -493,7 +801,7 @@
 					"conditions": [
 						{
 							"id": "on-collision-with-another-object",
-							"objectClass": "player1",
+							"objectClass": "playerColl1",
 							"sid": 684945106127385,
 							"parameters": {
 								"object": "goal1"
@@ -508,8 +816,13 @@
 						},
 						{
 							"id": "destroy",
-							"objectClass": "player1",
+							"objectClass": "playerColl1",
 							"sid": 552665443285442
+						},
+						{
+							"id": "destroy",
+							"objectClass": "Player1",
+							"sid": 195813850924432
 						},
 						{
 							"id": "add-to-eventvar",
@@ -528,7 +841,7 @@
 					"conditions": [
 						{
 							"id": "on-collision-with-another-object",
-							"objectClass": "player2",
+							"objectClass": "playerColl2",
 							"sid": 931504530772501,
 							"parameters": {
 								"object": "goal2"
@@ -543,8 +856,13 @@
 						},
 						{
 							"id": "destroy",
-							"objectClass": "player2",
+							"objectClass": "playerColl2",
 							"sid": 924040237046920
+						},
+						{
+							"id": "destroy",
+							"objectClass": "Player2",
+							"sid": 488571747379551
 						},
 						{
 							"id": "add-to-eventvar",
@@ -609,7 +927,7 @@
 							"objectClass": "Button",
 							"sid": 446541530610434,
 							"parameters": {
-								"object": "player"
+								"object": "playerColl"
 							}
 						}
 					],
@@ -634,7 +952,7 @@
 							"objectClass": "Button",
 							"sid": 141755827699395,
 							"parameters": {
-								"object": "player"
+								"object": "playerColl"
 							},
 							"isInverted": true
 						}
@@ -726,6 +1044,33 @@
 										}
 									],
 									"sid": 365093147462299
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "ButtonAnim",
+											"sid": 762585961634985,
+											"parameters": {
+												"instance-variable": "id",
+												"comparison": 0,
+												"value": "toggleButton.targetId"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "ButtonAnim",
+											"sid": 956741058968384,
+											"parameters": {
+												"animation": "\"Active\"",
+												"from": "current-frame"
+											}
+										}
+									],
+									"sid": 737067072598001
 								},
 								{
 									"eventType": "block",
@@ -849,6 +1194,33 @@
 							"conditions": [
 								{
 									"id": "compare-instance-variable",
+									"objectClass": "ButtonAnim",
+									"sid": 754974778490059,
+									"parameters": {
+										"instance-variable": "id",
+										"comparison": 0,
+										"value": "HoldButton.AnimId"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "ButtonAnim",
+									"sid": 136095369993685,
+									"parameters": {
+										"animation": "\"Active\"",
+										"from": "current-frame"
+									}
+								}
+							],
+							"sid": 991427503775006
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
 									"objectClass": "HoldButton",
 									"sid": 807492942491090,
 									"parameters": {
@@ -925,6 +1297,33 @@
 							"conditions": [
 								{
 									"id": "compare-instance-variable",
+									"objectClass": "ButtonAnim",
+									"sid": 474527698217184,
+									"parameters": {
+										"instance-variable": "id",
+										"comparison": 0,
+										"value": "HoldButton.AnimId"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "ButtonAnim",
+									"sid": 701793515458982,
+									"parameters": {
+										"animation": "\"inactive\"",
+										"from": "current-frame"
+									}
+								}
+							],
+							"sid": 945447350230149
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
 									"objectClass": "HoldButton",
 									"sid": 512978543899063,
 									"parameters": {
@@ -992,7 +1391,7 @@
 					"actions": [
 						{
 							"id": "set-ignoring-input",
-							"objectClass": "player",
+							"objectClass": "playerColl",
 							"sid": 620782432880278,
 							"behaviorType": "Platform",
 							"parameters": {
@@ -1054,8 +1453,13 @@
 							"actions": [
 								{
 									"id": "destroy",
-									"objectClass": "player1",
+									"objectClass": "playerColl1",
 									"sid": 818794336388301
+								},
+								{
+									"id": "destroy",
+									"objectClass": "Player1",
+									"sid": 906536213704973
 								}
 							],
 							"sid": 955273754994254
@@ -1087,8 +1491,13 @@
 							"actions": [
 								{
 									"id": "destroy",
-									"objectClass": "player2",
+									"objectClass": "playerColl2",
 									"sid": 200193745899178
+								},
+								{
+									"id": "destroy",
+									"objectClass": "Player2",
+									"sid": 503840582973719
 								}
 							],
 							"sid": 126240856998297,
@@ -1183,7 +1592,7 @@
 					"conditions": [
 						{
 							"id": "on-collision-with-another-object",
-							"objectClass": "player1",
+							"objectClass": "playerColl1",
 							"sid": 569559650518143,
 							"parameters": {
 								"object": "laser2Coll"
@@ -1222,7 +1631,7 @@
 					"conditions": [
 						{
 							"id": "on-collision-with-another-object",
-							"objectClass": "player2",
+							"objectClass": "playerColl2",
 							"sid": 303735659484125,
 							"parameters": {
 								"object": "laser1Coll"

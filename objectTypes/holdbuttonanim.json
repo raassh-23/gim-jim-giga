@@ -1,0 +1,84 @@
+{
+	"name": "HoldButtonAnim",
+	"plugin-id": "Sprite",
+	"sid": 377451543956912,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 200,
+						"height": 59,
+						"originX": 0.5492957746478874,
+						"originY": 0.4021164021164021,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 9535998,
+						"collisionPoly": {
+							"points": [
+								0.2466648073258029,
+								0.22109463093069648,
+								0.762631896992516,
+								0.21597710122300284,
+								0.995049504950495,
+								0.9836065573770492,
+								0.0049504950495049506,
+								0.9836065573770492
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 934759119678886,
+				"name": "inactive",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			},
+			{
+				"frames": [
+					{
+						"width": 200,
+						"height": 39,
+						"originX": 0.5492957746478874,
+						"originY": 0.11023622047244094,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 1867585,
+						"collisionPoly": {
+							"points": [
+								0.20637908861308663,
+								0.024390243902439025,
+								0.8029176157052322,
+								0.024390243902439025,
+								0.995049504950495,
+								0.975609756097561,
+								0.0049504950495049506,
+								0.975609756097561
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 613876899763949,
+				"name": "Active",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}
