@@ -7,11 +7,11 @@
 				{
 					"id": "on-object-clicked",
 					"objectClass": "Mouse",
-					"sid": 743048977016800,
+					"sid": 535438591057594,
 					"parameters": {
 						"mouse-button": "left",
 						"click-type": "clicked",
-						"object-clicked": "MenuText"
+						"object-clicked": "UiText"
 					}
 				}
 			],
@@ -23,7 +23,7 @@
 					"conditions": [
 						{
 							"id": "compare-instance-variable",
-							"objectClass": "MenuText",
+							"objectClass": "UiText",
 							"sid": 798041038336110,
 							"parameters": {
 								"instance-variable": "id",
@@ -61,8 +61,154 @@
 						}
 					],
 					"sid": 869131515820183
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "UiText",
+							"sid": 590109991929862,
+							"parameters": {
+								"instance-variable": "id",
+								"comparison": 0,
+								"value": "2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 215626526365769,
+							"parameters": {
+								"layout": "Credit"
+							}
+						}
+					],
+					"sid": 304322202849448
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "UiText",
+							"sid": 503890514526782,
+							"parameters": {
+								"instance-variable": "id",
+								"comparison": 0,
+								"value": "3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "close",
+							"objectClass": "Browser",
+							"sid": 530723928760148
+						}
+					],
+					"sid": 537394121385582
 				}
 			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "cursor-is-over-object",
+					"objectClass": "Mouse",
+					"sid": 976236276741327,
+					"parameters": {
+						"object": "UiText"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "UiButton",
+					"sid": 654581289574980,
+					"parameters": {
+						"instance-variable": "id",
+						"comparison": 0,
+						"value": "UiText.id"
+					}
+				},
+				{
+					"id": "trigger-once-while-true",
+					"objectClass": "System",
+					"sid": 531673136556292
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "UiButton",
+					"sid": 683638673500323,
+					"parameters": {
+						"animation": "\"hover\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "set-cursor-style",
+					"objectClass": "Mouse",
+					"sid": 411699434590723,
+					"parameters": {
+						"cursor-style": "hand"
+					}
+				}
+			],
+			"sid": 543406211787133
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "cursor-is-over-object",
+					"objectClass": "Mouse",
+					"sid": 818506412004227,
+					"parameters": {
+						"object": "UiText"
+					},
+					"isInverted": true
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "UiButton",
+					"sid": 263145139622192,
+					"parameters": {
+						"instance-variable": "id",
+						"comparison": 0,
+						"value": "UiText.id"
+					}
+				},
+				{
+					"id": "trigger-once-while-true",
+					"objectClass": "System",
+					"sid": 718100599881171
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "UiButton",
+					"sid": 754513071988020,
+					"parameters": {
+						"animation": "\"normal\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "set-cursor-style",
+					"objectClass": "Mouse",
+					"sid": 903962190004002,
+					"parameters": {
+						"cursor-style": "normal"
+					}
+				}
+			],
+			"sid": 684074471923580
 		}
 	],
 	"sid": 495503461791079

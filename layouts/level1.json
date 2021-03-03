@@ -47,10 +47,10 @@
 					"behaviors": {},
 					"world": {
 						"x": 99,
-						"y": 157,
-						"width": 96,
-						"height": 96,
-						"originX": 0.5,
+						"y": 172,
+						"width": -99.84,
+						"height": 175.104,
+						"originX": 0.6653846153846154,
 						"originY": 0.5,
 						"color": [
 							1,
@@ -76,11 +76,11 @@
 					"behaviors": {},
 					"world": {
 						"x": 1177,
-						"y": 558,
-						"width": 100.224,
-						"height": 175.488,
-						"originX": 0.6666666666666666,
-						"originY": 0.5010940919037199,
+						"y": 556,
+						"width": 99.84,
+						"height": 175.104,
+						"originX": 0.6653846153846154,
+						"originY": 0.5,
 						"color": [
 							1,
 							1,
@@ -2357,15 +2357,48 @@
 			"overriden": 0,
 			"instances": [
 				{
+					"type": "blackBG",
+					"properties": {
+						"initially-visible": true,
+						"origin": "top-left",
+						"wrap-horizontal": "repeat",
+						"wrap-vertical": "repeat",
+						"image-offset-x": 0,
+						"image-offset-y": 0,
+						"image-scale-x": 1,
+						"image-scale-y": 1,
+						"image-angle": 0
+					},
+					"uid": 280,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": -34,
+						"y": -31,
+						"width": 1339,
+						"height": 786,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							0.5
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
 					"type": "LevelText",
 					"properties": {
 						"text": "Game Over",
 						"enable-bbcode": true,
-						"character-width": 16,
-						"character-height": 16,
+						"character-width": 51,
+						"character-height": 57,
 						"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#\"'&()[]|`\\/@°+=*$£€<>",
-						"spacing-data": "",
-						"scale": 6,
+						"spacing-data": "[[6,\" \"],[8,\"il.:!|\"],[14,\"jrsz,;'[]`\"],[16,\"°\"],[20,\"ABCDEFGHIJKLPRSTUVXYZabcdeghknopqtuvxy012356789?-\\\"()+=*$\"],[24,\"£€\"],[26,\"NOf4_~&<>\"],[32,\"MQWmw#\\\\/%\"],[49,\"@\"]]",
+						"scale": 3,
 						"character-spacing": 0,
 						"line-height": 0,
 						"horizontal-alignment": "center",
@@ -2379,9 +2412,9 @@
 					"behaviors": {},
 					"world": {
 						"x": 430,
-						"y": 244.5,
+						"y": 162,
 						"width": 420,
-						"height": 231,
+						"height": 396,
 						"originX": 0,
 						"originY": 0,
 						"color": [
@@ -2405,9 +2438,9 @@
 				1
 			],
 			"backgroundColor": [
-				0.3686274509803922,
-				0.3686274509803922,
-				0.3686274509803922,
+				0,
+				0,
+				0,
 				1
 			],
 			"isTransparent": true,

@@ -1,20 +1,20 @@
 {
-	"name": "LevelText",
-	"plugin-id": "Spritefont2",
-	"sid": 839927657396414,
+	"name": "blackBG",
+	"plugin-id": "TiledBg",
+	"sid": 754397740809188,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
 	"effectTypes": [],
 	"image": {
-		"width": 1024,
-		"height": 512,
+		"width": 250,
+		"height": 250,
 		"originX": 0.5,
 		"originY": 0.5,
 		"originalSource": "",
 		"exportFormat": "png",
 		"exportQuality": 0.8,
-		"imageSpriteId": 8182205,
+		"imageSpriteId": 6986764,
 		"useCollisionPoly": true
 	}
 }

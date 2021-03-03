@@ -1,9 +1,16 @@
 {
-	"name": "LevelText",
+	"name": "UiText",
 	"plugin-id": "Spritefont2",
-	"sid": 839927657396414,
+	"sid": 901937037518259,
 	"isGlobal": false,
-	"instanceVariables": [],
+	"instanceVariables": [
+		{
+			"name": "id",
+			"type": "number",
+			"desc": "",
+			"sid": 854431435216178
+		}
+	],
 	"behaviorTypes": [],
 	"effectTypes": [],
 	"image": {
@@ -14,7 +21,7 @@
 		"originalSource": "",
 		"exportFormat": "png",
 		"exportQuality": 0.8,
-		"imageSpriteId": 8182205,
+		"imageSpriteId": 1429737,
 		"useCollisionPoly": true
 	}
 }

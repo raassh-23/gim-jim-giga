@@ -8,8 +8,16 @@
 	"usedAddons": [
 		{
 			"type": "plugin",
-			"id": "Sprite",
-			"name": "Sprite",
+			"id": "Spritefont2",
+			"name": "Sprite font",
+			"author": "Scirra",
+			"version": "r234.4",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Mouse",
+			"name": "Mouse",
 			"author": "Scirra",
 			"version": "r234.4",
 			"bundled": false
@@ -24,24 +32,32 @@
 		},
 		{
 			"type": "plugin",
+			"id": "Audio",
+			"name": "Audio",
+			"author": "Scirra",
+			"version": "r234.4",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Browser",
+			"name": "Browser",
+			"author": "Scirra",
+			"version": "r234.4",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Sprite",
+			"name": "Sprite",
+			"author": "Scirra",
+			"version": "r234.4",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "TiledBg",
 			"name": "Tiled Background",
-			"author": "Scirra",
-			"version": "r234.4",
-			"bundled": false
-		},
-		{
-			"type": "plugin",
-			"id": "Spritefont2",
-			"name": "Sprite font",
-			"author": "Scirra",
-			"version": "r234.4",
-			"bundled": false
-		},
-		{
-			"type": "plugin",
-			"id": "Mouse",
-			"name": "Mouse",
 			"author": "Scirra",
 			"version": "r234.4",
 			"bundled": false
@@ -76,7 +92,6 @@
 		"items": [
 			"player1",
 			"player2",
-			"Keyboard",
 			"rope",
 			"goal2",
 			"goal1",
@@ -88,15 +103,33 @@
 			"moveableGround",
 			"movingGround",
 			"UiButton",
-			"MenuText",
-			"Mouse",
 			"lives",
-			"LevelText",
 			"laser1Coll",
 			"laser2Coll",
-			"border"
+			"border",
+			"blackBG"
 		],
-		"subfolders": []
+		"subfolders": [
+			{
+				"items": [
+					"UiText",
+					"MenuText",
+					"LevelText"
+				],
+				"subfolders": [],
+				"name": "text"
+			},
+			{
+				"items": [
+					"Mouse",
+					"Keyboard",
+					"Audio",
+					"Browser"
+				],
+				"subfolders": [],
+				"name": "other"
+			}
+		]
 	},
 	"autosaveData": null,
 	"containers": [],
@@ -116,7 +149,8 @@
 			"level2",
 			"level3",
 			"level4",
-			"Menu"
+			"Menu",
+			"Credit"
 		],
 		"subfolders": []
 	},
