@@ -156,14 +156,17 @@
 			"level3",
 			"level4",
 			"Menu",
-			"Credit"
+			"Credit",
+			"level5",
+			"EndScreen"
 		],
 		"subfolders": []
 	},
 	"eventSheets": {
 		"items": [
 			"level",
-			"Menu"
+			"Menu",
+			"endscreen"
 		],
 		"subfolders": []
 	},

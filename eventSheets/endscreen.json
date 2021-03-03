@@ -1,0 +1,27 @@
+{
+	"name": "endscreen",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-any-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 534049629555023
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 970728476873072,
+					"parameters": {
+						"layout": "Menu"
+					}
+				}
+			],
+			"sid": 458182794440668
+		}
+	],
+	"sid": 364831235311077
+}

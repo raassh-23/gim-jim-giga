@@ -25,7 +25,7 @@
 			"eventType": "variable",
 			"name": "levelNow",
 			"type": "number",
-			"initialValue": "1",
+			"initialValue": "5",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
@@ -40,6 +40,16 @@
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 969407542234247
+		},
+		{
+			"eventType": "variable",
+			"name": "maxLevel",
+			"type": "number",
+			"initialValue": "5",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 873236477181891
 		},
 		{
 			"eventType": "group",
@@ -911,9 +921,9 @@
 						{
 							"id": "go-to-layout-by-name",
 							"objectClass": "System",
-							"sid": 167998201224510,
+							"sid": 884945204480393,
 							"parameters": {
-								"layout": "\"level\"&levelNow"
+								"layout": "levelNow <= maxLevel ? \"level\"&levelNow : \"EndScreen\""
 							}
 						}
 					],

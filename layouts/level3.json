@@ -5097,6 +5097,82 @@
 						"angle": 1.5707963267948966,
 						"zElevation": 0
 					}
+				},
+				{
+					"type": "HoldButtonAnim",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "inactive",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 352,
+					"instanceVariables": {
+						"id": 2
+					},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": "normal"
+							}
+						}
+					},
+					"world": {
+						"x": 393.9611634089347,
+						"y": 518.1205339433131,
+						"width": 30.3992358701397,
+						"height": 8.967774581691213,
+						"originX": 0.5492957746478874,
+						"originY": 0.4021164021164021,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "HoldButtonAnim",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "inactive",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 351,
+					"instanceVariables": {
+						"id": 1
+					},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": "normal"
+							}
+						}
+					},
+					"world": {
+						"x": 872.8767860513099,
+						"y": 338.9903773495614,
+						"width": 30.3992358701397,
+						"height": 8.967774581691213,
+						"originX": 0.5492957746478874,
+						"originY": 0.4021164021164021,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
 				}
 			],
 			"sid": 535276421016321,
@@ -5308,82 +5384,6 @@
 						"height": 111.92580000000001,
 						"originX": 0.5,
 						"originY": 1,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "HoldButtonAnim",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "inactive",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 351,
-					"instanceVariables": {
-						"id": 1
-					},
-					"behaviors": {
-						"Solid": {
-							"properties": {
-								"enabled": true,
-								"tags": "normal"
-							}
-						}
-					},
-					"world": {
-						"x": 872.8767860513099,
-						"y": 338.9903773495614,
-						"width": 30.3992358701397,
-						"height": 8.967774581691213,
-						"originX": 0.5492957746478874,
-						"originY": 0.4021164021164021,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "HoldButtonAnim",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "inactive",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 352,
-					"instanceVariables": {
-						"id": 2
-					},
-					"behaviors": {
-						"Solid": {
-							"properties": {
-								"enabled": true,
-								"tags": "normal"
-							}
-						}
-					},
-					"world": {
-						"x": 393.9611634089347,
-						"y": 518.1205339433131,
-						"width": 30.3992358701397,
-						"height": 8.967774581691213,
-						"originX": 0.5492957746478874,
-						"originY": 0.4021164021164021,
 						"color": [
 							1,
 							1,
